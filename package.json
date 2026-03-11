@@ -1,0 +1,26 @@
+{
+  "name": "examen_final_web_1",
+  "version": "1.0.0",
+  "description": "Examen final Web1\r STD25072 - STD25050",
+  "main": "tokimahery.data.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx @tailwindcss/cli -i ./input.css -o ./style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andy-coder7/Examen_final_Web_1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Andy-coder7/Examen_final_Web_1/issues"
+  },
+  "homepage": "https://github.com/Andy-coder7/Examen_final_Web_1#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.1",
+    "tailwindcss": "^4.2.1"
+  }
+}
