@@ -8,11 +8,10 @@
   <link href="output.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="script.js"></script>
 </head>
 
 <body>
-  <nav class="bg-[#991b1b] flex justify-around h-[10vh] items-center fixed w-full">
+  <nav class="bg-[#991b1b] flex justify-around h-[10vh] items-center fixed  z-50 w-full">
     <div>
       <a href="index.html" class="flex gap-2">
         <span class="w-1 bg-white h-10 inline-block"></span>
@@ -53,9 +52,9 @@
           <a class="text-white font-['Poppins']" href="testimonials.html">TESTIMONIALS</a>
           <span
             class="absolute -bottom-2 left-1/2 h-0.5 w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
-        </li>
+          </li>
 
-        <li class="group relative inline-block cursor-pointer">
+          <li class="group relative inline-block cursor-pointer">
           <a class="text-white font-['Poppins']" href="research.html">RESEARCH</a>
           <span
             class="absolute -bottom-2 left-1/2 h-0.5 w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
@@ -72,10 +71,12 @@
     </div>
     <h1></h1>
   </header>
-  <main>
-    <section></section>
+  <main class="pt-[15vh] px-12">
+    <section id="courses-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></section>
     <article></article>
   </main>
 </body>
+<script src="tokimahery.data.js"></script>
+<script src="courses.js"></script>
 
 </html>
