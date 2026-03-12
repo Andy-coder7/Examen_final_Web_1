@@ -61,3 +61,72 @@ function afficherCours() {
 }
 
 window.onload = afficherCours;
+// On attrape les sliders de prix
+const curseurMin = document.getElementById('minRange');
+const curseurMax = document.getElementById('maxRange');
+
+// On attrape les textes qui affichent le prix au-dessus des sliders
+const labelMin = document.getElementById('minLabel');
+const labelMax = document.getElementById('maxLabel');
+
+// On attrape le menu de technologie (le select)
+const selectTech = document.getElementById('tech-filter');
+
+// On attrape la barre de recherche
+const barreRecherche = document.querySelector('input[placeholder="Find a course..."]');
+// Dès qu'on bouge le curseur Min
+curseurMin.oninput = filtrerLesCours;
+
+// Dès qu'on bouge le curseur Max
+curseurMax.oninput = filtrerLesCours;
+
+// Dès qu'on change la technologie dans la liste
+selectTech.onchange = filtrerLesCours;
+
+// Dès qu'on tape dans la barre de recherche
+barreRecherche.oninput = filtrerLesCours;
+function filtrerLesCours() {
+    // ÉTAPE A : Récupérer ce que l'utilisateur a choisi
+    let prixMinimumChoisi = Number(curseurMin.value);
+    let prixMaximumChoisi = Number(curseurMax.value);
+    let technologieChoisie = selectTech.value;
+    let texteRecherche = barreRecherche.value.toLowerCase();
+
+    // ÉTAPE B : Mettre à jour les petits textes de prix en haut
+    labelMin.innerText = prixMinimumChoisi.toLocaleString('fr-FR');
+    labelMax.innerText = prixMaximumChoisi.toLocaleString('fr-FR');
+
+    // ÉTAPE C : Faire le tri (Le filtrage)
+    // On crée une nouvelle liste vide pour stocker les cours qui correspondent
+    let coursQuiSontBons = [];
+
+    // On regarde chaque cours un par un dans tes données originales
+    for (let i = 0; i < data.courses.length; i++) {
+        let leCoursActuel = data.courses[i];
+
+        // 1. Est-ce que le prix est entre le min et le max ?
+        let prixOk = leCoursActuel.price >= prixMinimumChoisi && leCoursActuel.price <= prixMaximumChoisi;
+
+        // 2. Est-ce que c'est la bonne technologie ? 
+        // (Si c'est vide "" dans le select, ça veut dire "Tout afficher")
+        let techOk = (technologieChoisie === "") || (leCoursActuel.technologies === technologieChoisie);
+
+        // 3. Est-ce que le titre contient ce qu'on a tapé ?
+        let titreOk = leCoursActuel.title.toLowerCase().includes(texteRecherche);
+
+        // Si le cours remplit TOUTES les conditions, on l'ajoute à notre liste
+        if (prixOk && techOk && titreOk) {
+            coursQuiSontBons.push(leCoursActuel);
+        }
+    }
+
+    // ÉTAPE D : Afficher le résultat
+    // On remplace temporairement la liste globale par notre liste triée
+    // Puis on appelle TA fonction afficherCours()
+    let ancienneListe = data.courses; 
+    data.courses = coursQuiSontBons;
+    
+    afficherCours(); // Ton code original qui dessine les cartes
+    
+    data.courses = ancienneListe; // On remet la liste complète pour le prochain tri
+}
