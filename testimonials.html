@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,9 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
-      <nav class="bg-[#991b1b] flex justify-between h-[10vh] items-center fixed w-full z-50">
+  <nav class="bg-[#991b1b] flex justify-between h-[10vh] items-center fixed w-full z-50">
     <div class="flex ml-10">
       <a href="index.html" class="flex gap-2">
         <span class="w-1 bg-white h-10 inline-block"></span>
@@ -32,24 +34,64 @@
             href="index.html">HOME</a><span
             class="absolute -bottom-2 left-1/2 h-1 w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-[1px]"></span>
         </li>
-        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="blog.html">BLOG</a><span
+        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']"
+            href="blog.html">BLOG</a><span
             class="absolute -bottom-2 left-1/2 h-1 w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-[1px]"></span>
         </li>
-        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="courses.html">COURSES</a><span
+        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']"
+            href="courses.html">COURSES</a><span
             class="absolute -bottom-2 left-1/2 h-1 w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-[1px]"></span>
         </li>
-        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="testimonials.html">TESTIMONIALS</a><span
+        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']"
+            href="testimonials.html">TESTIMONIALS</a><span
             class="absolute -bottom-2 left-1/2 h-1 w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-[1px]"></span>
         </li>
-        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="research.html">RESEARCH</a><span
+        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']"
+            href="research.html">RESEARCH</a><span
             class="absolute -bottom-2 left-1/2 h-1 w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-[1px]"></span>
         </li>
       </ul>
     </div>
     <div class="mr-10">
-      <input class="text-white text-xm font-['Poppins'] placeholder-[#a8a29e] placeholder:font-thin" type="text" placeholder="Search anything...">
+      <input class="text-white text-xm font-['Poppins'] placeholder-[#a8a29e] placeholder:font-thin" type="text"
+        placeholder="Search anything...">
       <a href=""><i class="fa-solid fa-basket-shopping text-white fa-2x"></i></a>
     </div>
   </nav>
+  <header class="bg-amber-50 w-full h-72  top-0 left-0 z-100 flex flex-col justify-center items-center px-12">
+    <div class="flex items-center pt-20 gap-2">
+      <span class="w-8 h-px bg-[#991b1b]"></span>
+      <div class="text-xs font-bold tracking-widest uppercase">
+        <p>SOCIAL PROOF</p>
+      </div>
+      <span class="w-8 h-px bg-[#991b1b]"></span>
+    </div>
+    <h1 class="text-4xl font-serif font-bold flex gap-2">
+      <span>What people</span>
+      <span class="text-[#991b1b]">say</span>
+    </h1>
+    <div class="text-gray-600 max-w-2xl mt-2 text-center">
+      Hundreds of students, collaborators, and clients have trusted tokimahery's expertise. Here's what they have to
+      say.
+    </div>
+  </header>
+  <main>
+    <section id="students-container"></section>
+    <section id="collaborator-container"></section>
+    <section id="costumers-container"></section>
+  </main>
+  <footer class="bg-[#b91c1c] h-[30vh] flex flex-col items-center justify-center gap-8">
+    <h1 class="text-white font-['Playfair_Display'] text-5xl font-extrabold">Join them.</h1>
+    <p class="text-white font-['Poppins'] items-center">Whether you want to learn, collaborate, or get something built - Tokimahery
+      is ready to help you move forward.</p>
+    <div class="flex flex-row justify-between items-center gap-4 mt-6">
+      <a class="text-white border w-44 h-12 rounded-full flex justify-center items-center hover:bg-white hover:text-[#b91c1c]"
+        href="">BOOK A COURSE</a>
+      <a class="text-[#b91c1c] bg-white border w-44 h-12 rounded-full flex justify-center items-center hover:bg-[#b91c1c] hover:text-white"
+        href="">COLLABORATE</a>
+    </div>
+  </footer>
 </body>
+<script src="tokimahery.data.js"></script>
+<script src="testimonials.js"></script>
 </html>
