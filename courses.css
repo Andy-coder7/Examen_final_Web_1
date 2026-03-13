@@ -1,17 +1,17 @@
-/* Style du bouton pour Chrome, Safari, Edge */
+
 .slider-rouge::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 18px;
   height: 18px;
-  background: #991b1b; /* Ton rouge */
+  background: #991b1b; 
   border-radius: 50%;
   border: 2px solid white;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   cursor: pointer;
 }
 
-/* Style du bouton pour Firefox */
+
 .slider-rouge::-moz-range-thumb {
   width: 18px;
   height: 18px;
