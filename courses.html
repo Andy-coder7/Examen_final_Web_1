@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>COURSES</title>
   <link href="output.css" rel="stylesheet">
@@ -11,7 +11,7 @@
 </head>
 
 <body>
-   <nav class="bg-[#991b1b] flex justify-between h-[10vh] items-center fixed w-full z-50">
+  <nav class="bg-[#991b1b] flex justify-between h-[10vh] items-center fixed w-full z-50">
     <div class="flex ml-10">
       <a href="index.html" class="flex gap-2">
         <span class="w-1 bg-white h-10 inline-block"></span>
@@ -34,23 +34,32 @@
             href="index.html">HOME</a><span
             class="absolute -bottom-2 left-1/2  w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-px"></span>
         </li>
-        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="blog.html">BLOG</a><span
+        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']"
+            href="blog.html">BLOG</a><span
             class="absolute -bottom-2 left-1/2  w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-px"></span>
         </li>
-        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="courses.html">COURSES</a><span
+        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']"
+            href="courses.html">COURSES</a><span
             class="absolute -bottom-2 left-1/2  w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-px"></span>
         </li>
-        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="testimonials.html">TESTIMONIALS</a><span
+        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']"
+            href="testimonials.html">TESTIMONIALS</a><span
             class="absolute -bottom-2 left-1/2  w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-px"></span>
         </li>
-        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="research.html">RESEARCH</a><span
+        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']"
+            href="research.html">RESEARCH</a><span
             class="absolute -bottom-2 left-1/2  w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-px"></span>
         </li>
       </ul>
     </div>
     <div class="mr-10">
-      <input class="text-white text-xm font-['Poppins'] placeholder-[#a8a29e] placeholder:font-thin" type="text" placeholder="Search anything...">
-      <a onclick="ouvrirPanier()" class="relative"><i class="fa-solid fa-basket-shopping text-white fa-2x"></i></a>
+      <input class="text-white text-xm font-['Poppins'] placeholder-[#a8a29e] placeholder:font-thin" type="text"
+        placeholder="Search anything...">
+      <a onclick="ouvrirPanier()" class="relative"><i class="fa-solid fa-basket-shopping text-white fa-2x"></i><span
+          id="cart-count"
+          class="absolute -top-2 -right-2 bg-white text-[#991b1b] text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center shadow-sm">
+          0
+        </span></a>
     </div>
   </nav>
   <header class="bg-amber-50 w-full h-72  top-0 left-0 z-100 flex flex-col justify-center items-center px-12">
@@ -72,85 +81,99 @@
   </header>
 
   <main class="pt-5 px-12">
-    <article class="flex flex-wrap items-end justify-evenly gap-6 p-6 bg-amber-50 rounded-xl border border-amber-100 shadow-sm">
-  
-  <div class="flex flex-col gap-2">
-    <h2 class="text-[10px] font-bold tracking-widest text-gray-400 uppercase">Language</h2>
-    <div class="flex gap-3">
-      <a href="#" class="hover:scale-110 transition-transform"><img src="https://flagcdn.com/w40/fr.png" alt="France" class="w-7 h-5 object-cover rounded shadow-sm"></a>
-      <a href="#" class="hover:scale-110 transition-transform"><img src="https://flagcdn.com/w40/gb.png" alt="UK" class="w-7 h-5 object-cover rounded shadow-sm"></a>
-      <a href="#" class="hover:scale-110 transition-transform"><img src="https://flagcdn.com/w40/mg.png" alt="Madagascar" class="w-7 h-5 object-cover rounded shadow-sm"></a>
-    </div>
-  </div>
+    <article
+      class="flex flex-wrap items-end justify-evenly gap-6 p-6 bg-amber-50 rounded-xl border border-amber-100 shadow-sm">
 
-  <div class="flex flex-col gap-2">
-    <h2 class="text-[10px] font-bold tracking-widest text-gray-400 uppercase">Technology</h2>
-    <select id="tech-filter" class="bg-white border border-gray-200 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-[#991b1b] outline-none cursor-pointer">
-        <option value="">All Tech</option>
-        <option value="javascript">Javascript</option>
-        <option value="java">Java</option>
-        <option value="sql">SQL</option>
-    </select>
-  </div>
+      <div class="flex flex-col gap-2">
+        <h2 class="text-[10px] font-bold tracking-widest text-gray-400 uppercase">Language</h2>
+        <div class="flex gap-3">
+          <a href="#" class="hover:scale-110 transition-transform"><img src="https://flagcdn.com/w40/fr.png"
+              alt="France" class="w-7 h-5 object-cover rounded shadow-sm"></a>
+          <a href="#" class="hover:scale-110 transition-transform"><img src="https://flagcdn.com/w40/gb.png" alt="UK"
+              class="w-7 h-5 object-cover rounded shadow-sm"></a>
+          <a href="#" class="hover:scale-110 transition-transform"><img src="https://flagcdn.com/w40/mg.png"
+              alt="Madagascar" class="w-7 h-5 object-cover rounded shadow-sm"></a>
+        </div>
+      </div>
 
-  <div class="flex flex-col gap-2">
-    <h2 class="text-[10px] font-bold tracking-widest text-gray-400 uppercase">Level</h2>
-    <select id="level-filter" class="bg-white border border-gray-200 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-[#991b1b] outline-none cursor-pointer">
-        <option value="">All Levels</option>
-        <option value="Beginner">Beginner</option>
-        <option value="Advanced">Advanced</option>
-    </select>
-  </div>
-  <div class="flex flex-col gap-2">
-  
-  <div class="flex justify-between items-center">
-    <h2 class="text-[11px] font-bold tracking-widest text-[#8e9aaf] uppercase">Price Range</h2>
-    <div class="text-[13px] font-bold text-[#991b1b]">
-      <span id="minLabel">0</span> Ar - <span id="maxLabel">300.000</span> Ar
-    </div>
-  </div>
+      <div class="flex flex-col gap-2">
+        <h2 class="text-[10px] font-bold tracking-widest text-gray-400 uppercase">Technology</h2>
+        <select id="tech-filter"
+          class="bg-white border border-gray-200 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-[#991b1b] outline-none cursor-pointer">
+          <option value="">All Tech</option>
+          <option value="javascript">Javascript</option>
+          <option value="java">Java</option>
+          <option value="sql">SQL</option>
+        </select>
+      </div>
 
-  <div class="space-y-1">
-    <input type="range" id="minRange" min="0" max="300000" step="5000" value="0" 
-      class="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer slider-rouge">
-  </div>
+      <div class="flex flex-col gap-2">
+        <h2 class="text-[10px] font-bold tracking-widest text-gray-400 uppercase">Level</h2>
+        <select id="level-filter"
+          class="bg-white border border-gray-200 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-[#991b1b] outline-none cursor-pointer">
+          <option value="">All Levels</option>
+          <option value="Beginner">Beginner</option>
+          <option value="Advanced">Advanced</option>
+        </select>
+      </div>
+      <div class="flex flex-col gap-2">
 
-  <div class="space-y-1">
-    <input type="range" id="maxRange" min="0" max="300000" step="5000" value="300000" 
-      class="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer slider-rouge">
-  </div>
+        <div class="flex justify-between items-center">
+          <h2 class="text-[11px] font-bold tracking-widest text-[#8e9aaf] uppercase">Price Range</h2>
+          <div class="text-[13px] font-bold text-[#991b1b]">
+            <span id="minLabel">0</span> Ar - <span id="maxLabel">300.000</span> Ar
+          </div>
+        </div>
 
-</div>
-</div>
+        <div class="space-y-1">
+          <input type="range" id="minRange" min="0" max="300000" step="5000" value="0"
+            class="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer slider-rouge">
+        </div>
 
-  <div class="flex flex-col gap-2">
-    <h2 class="text-[10px] font-bold tracking-widest text-gray-400 uppercase">Search</h2>
-    <input type="text" placeholder="Find a course..." class="bg-white border border-gray-200 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-[#991b1b] outline-none shadow-inner w-48">
-  </div>
+        <div class="space-y-1">
+          <input type="range" id="maxRange" min="0" max="300000" step="5000" value="300000"
+            class="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer slider-rouge">
+        </div>
 
-  <button class="mb-2 text-[#991b1b] hover:text-red-800 text-[10px] font-bold uppercase tracking-widest transition-colors border-b-2 border-transparent hover:border-[#991b1b]">
-    Clear All
-  </button>
+      </div>
+      </div>
 
-</article>
+      <div class="flex flex-col gap-2">
+        <h2 class="text-[10px] font-bold tracking-widest text-gray-400 uppercase">Search</h2>
+        <input type="text" placeholder="Find a course..."
+          class="bg-white border border-gray-200 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-[#991b1b] outline-none shadow-inner w-48">
+      </div>
+
+      <button
+        class="mb-2 text-[#991b1b] hover:text-red-800 text-[10px] font-bold uppercase tracking-widest transition-colors border-b-2 border-transparent hover:border-[#991b1b]">
+        Clear All
+      </button>
+
+    </article>
     <section id="courses-container" class="grid pt-11 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-20"></section>
   </main>
   <footer class="bg-[#b91c1c] h-[30vh] flex flex-col items-center justify-center gap-8">
-  <h1 class="text-white font-['Playfair_Display'] text-5xl font-extrabold">Not sure where to start?</h1>
-  <p class="text-white font-['Poppins']">Book a free discovery call and find the course that fits your goals and schedule.</p>
-  <a class="text-white border w-44 h-12 rounded-full flex justify-center items-center hover:bg-white hover:text-[#b91c1c]" href="">GET IN TOUCH</a>
-</footer>
-<div id="panier" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-[100]">
-  <div class="bg-white p-6 rounded-2xl w-96 relative">
-    <button onclick="fermerPanier()" class="absolute top-4 right-4 text-gray-400">✕</button>
-    
-    <h2 class="text-xl font-bold mb-4">Your cart</h2>
-    
-    <div id="listePanier" class="space-y-4 text-center">
-      <p class="text-gray-400 italic">Your cart is empty.</p>
+    <h1 class="text-white font-['Playfair_Display'] text-5xl font-extrabold">Not sure where to start?</h1>
+    <p class="text-white font-['Poppins']">Book a free discovery call and find the course that fits your goals and
+      schedule.</p>
+    <a class="text-white border w-44 h-12 rounded-full flex justify-center items-center hover:bg-white hover:text-[#b91c1c]"
+      href="">GET IN TOUCH</a>
+  </footer>
+  <div id="panier" class="hidden fixed inset-0 bg-black/50 items-center justify-center z-[100]">
+    <div class="bg-white p-6 rounded-2xl w-96 relative">
+      <button onclick="fermerPanier()" class="absolute top-4 right-4 text-gray-400">✕</button>
+
+      <h2 class="text-xl font-bold mb-4">Your cart</h2>
+
+      <div id="listePanier" class="space-y-4 text-center">
+        <p class="text-gray-400 italic">Your cart is empty.</p>
+      </div>
+      <div class="border-t mt-4 pt-4 flex justify-between font-bold text-[#991b1b]">
+        <span>Total:</span>
+        <span id="totalPrix">0 Ar</span>
+      </div>
     </div>
   </div>
-</div>
 </body>
 <script src="tokimahery.data.js"></script>
 <script src="courses.js"></script>

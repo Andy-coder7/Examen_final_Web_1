@@ -132,47 +132,67 @@ function filtrerLesCours() {
 }
 // On crée une variable pour désigner la fenêtre
 const laFenetrePanier = document.getElementById('panierModale');
+function ajouterAuPanier(title, price) {
+    // 1. Vérification si le cours existe déjà
+    const existeDeja = panier.find(c => c.titre === title);
 
+    if (existeDeja) {
+        alert("⚠️ " + title + " is already in your cart!");
+        return; 
+    }
+
+    // 2. Ajout du cours au tableau
+    let objetCours = {
+        titre: title,
+        tarif: price
+    };
+    panier.push(objetCours);
+    
+    // 3. MISE À JOUR DU COMPTEUR (Badge)
+    // On récupère l'élément par son ID et on y écrit le nombre d'éléments du panier
+    const badge = document.getElementById('cart-count');
+    if (badge) {
+        badge.innerText = panier.length;
+    }
+
+    // On garde juste le log pour nous aider à débugger si besoin
+    console.log("Panier mis à jour :", panier);
+}
 
 
 // 2. Fonction pour OUVRIR et REMPLIR
 function ouvrirPanier() {
     const fenetre = document.getElementById('panier');
     const zoneTexte = document.getElementById('listePanier');
+    const zoneTotal = document.getElementById('totalPrix'); // On attrape la zone du prix
     
-    fenetre.classList.remove('hidden'); // On montre la fenêtre
+    fenetre.classList.remove('hidden');
+    fenetre.classList.add('flex');
     
     if (panier.length > 0) {
-        zoneTexte.innerHTML = ""; // On efface le message "vide"
-        
-        // On fait une boucle pour afficher chaque cours du panier
+        zoneTexte.innerHTML = ""; 
+        let somme = 0; // On commence à zéro
+
         for (let i = 0; i < panier.length; i++) {
+            // On ajoute le prix de chaque cours à la somme
+            somme = somme + panier[i].tarif;
+
             zoneTexte.innerHTML += `
                 <div class="flex justify-between border-b pb-2">
-                    <span>${panier[i].nom}</span>
-                    <span class="font-bold">${panier[i].prix} Ar</span>
+                    <span>${panier[i].titre}</span>
+                    <span class="font-bold">${panier[i].tarif.toLocaleString()} Ar</span>
                 </div>`;
         }
+        
+        zoneTotal.innerText = somme.toLocaleString() + " Ar";
+
+    } else {
+        zoneTexte.innerHTML = '<p class="text-gray-400 italic">Your cart is empty.</p>';
+        zoneTotal.innerText = "0 Ar";
     }
 }
 
-// 3. Fonction pour FERMER
 function fermerPanier() {
+    document.getElementById('panier').classList.remove('flex');
     document.getElementById('panier').classList.add('hidden');
-}
-function ajouterAuPanier(title, price) {
-    // On crée un petit objet avec les infos
-    let objetCours = {
-        titre: title,
-        tarif: price
-    };
-
-    // On l'ajoute à la liste
-    panier.push(objetCours);
-
-    // On affiche une alerte pour confirmer
-    alert(title + " a été ajouté ! (Total dans le panier : " + panier.length + ")");
-    
-    // On affiche dans la console pour vérifier
-    console.log("Contenu du panier :", panier);
 }
