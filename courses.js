@@ -25,6 +25,9 @@ function afficherCours() {
                         ${htmlLangue}
                         ${htmlTech}
                     </div>
+                    <div class="absolute top-40 bg-green-600 text-white right-0 gap-1 rounded-l w-28 h-8 flex items-center justify-center">
+                        ${cours.level}
+                    </div>
                 </div>
                 
                 <div class="p-3 grow flex flex-col">
