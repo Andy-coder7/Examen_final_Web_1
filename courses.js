@@ -1,3 +1,4 @@
+let panier = []; // Notre liste vide
 function afficherCours() {
     const container = document.getElementById('courses-container');
 
@@ -50,9 +51,10 @@ function afficherCours() {
                                 Learn more
                             </button>
                             
-                            <button class="bg-[#991b1b] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#7f1d1d] transition-colors">
+                            <button onclick="ajouterAuPanier('${cours.title}', ${cours.price})" class="bg-[#991b1b] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#7f1d1d] transition-colors">
                                 Add to cart
                             </button>
+                            
                         </div>
                     </div>
                 </div>
@@ -127,4 +129,50 @@ function filtrerLesCours() {
     afficherCours(); 
     
     data.courses = ancienneListe; 
+}
+// On crée une variable pour désigner la fenêtre
+const laFenetrePanier = document.getElementById('panierModale');
+
+
+
+// 2. Fonction pour OUVRIR et REMPLIR
+function ouvrirPanier() {
+    const fenetre = document.getElementById('panier');
+    const zoneTexte = document.getElementById('listePanier');
+    
+    fenetre.classList.remove('hidden'); // On montre la fenêtre
+    
+    if (panier.length > 0) {
+        zoneTexte.innerHTML = ""; // On efface le message "vide"
+        
+        // On fait une boucle pour afficher chaque cours du panier
+        for (let i = 0; i < panier.length; i++) {
+            zoneTexte.innerHTML += `
+                <div class="flex justify-between border-b pb-2">
+                    <span>${panier[i].nom}</span>
+                    <span class="font-bold">${panier[i].prix} Ar</span>
+                </div>`;
+        }
+    }
+}
+
+// 3. Fonction pour FERMER
+function fermerPanier() {
+    document.getElementById('panier').classList.add('hidden');
+}
+function ajouterAuPanier(title, price) {
+    // On crée un petit objet avec les infos
+    let objetCours = {
+        titre: title,
+        tarif: price
+    };
+
+    // On l'ajoute à la liste
+    panier.push(objetCours);
+
+    // On affiche une alerte pour confirmer
+    alert(title + " a été ajouté ! (Total dans le panier : " + panier.length + ")");
+    
+    // On affiche dans la console pour vérifier
+    console.log("Contenu du panier :", panier);
 }

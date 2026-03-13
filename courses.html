@@ -50,7 +50,7 @@
     </div>
     <div class="mr-10">
       <input class="text-white text-xm font-['Poppins'] placeholder-[#a8a29e] placeholder:font-thin" type="text" placeholder="Search anything...">
-      <a href=""><i class="fa-solid fa-basket-shopping text-white fa-2x"></i></a>
+      <a onclick="ouvrirPanier()" class="relative"><i class="fa-solid fa-basket-shopping text-white fa-2x"></i></a>
     </div>
   </nav>
   <header class="bg-amber-50 w-full h-72  top-0 left-0 z-100 flex flex-col justify-center items-center px-12">
@@ -140,6 +140,17 @@
   <p class="text-white font-['Poppins']">Book a free discovery call and find the course that fits your goals and schedule.</p>
   <a class="text-white border w-44 h-12 rounded-full flex justify-center items-center hover:bg-white hover:text-[#b91c1c]" href="">GET IN TOUCH</a>
 </footer>
+<div id="panier" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-[100]">
+  <div class="bg-white p-6 rounded-2xl w-96 relative">
+    <button onclick="fermerPanier()" class="absolute top-4 right-4 text-gray-400">✕</button>
+    
+    <h2 class="text-xl font-bold mb-4">Your cart</h2>
+    
+    <div id="listePanier" class="space-y-4 text-center">
+      <p class="text-gray-400 italic">Your cart is empty.</p>
+    </div>
+  </div>
+</div>
 </body>
 <script src="tokimahery.data.js"></script>
 <script src="courses.js"></script>
