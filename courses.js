@@ -16,18 +16,18 @@ function afficherCours() {
         }
 
         const cardHTML = `
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-all duration-300 flex flex-col">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-all duration-300 flex flex-col max-w-[16rem] mx-auto">
                 
                 <div class="relative">
                     <img src="${cours.thumbnail}" alt="${cours.title}" class="w-full h-48 object-cover">
                     
-                    <div class="absolute top-3 left-3 flex gap-2">
+                    <div class="absolute top-2 left-2 flex gap-1">
                         ${htmlLangue}
                         ${htmlTech}
                     </div>
                 </div>
                 
-                <div class="p-6 grow flex flex-col">
+                <div class="p-3 grow flex flex-col">
                     <h3 class="font-['Playfair_Display'] text-2xl font-bold text-[#991b1b] leading-tight mb-3">
                         ${cours.title}
                     </h3>
