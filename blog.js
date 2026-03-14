@@ -142,7 +142,117 @@ document.getElementById("tags12").textContent = data.posts[4].tags[0];
 document.getElementById("tags13").textContent = data.posts[4].tags[1];
 document.getElementById("tags14").textContent = data.posts[4].tags[2];
 
+document.getElementById("post_title6").textContent = data.posts[5].title;
+document.getElementById("post_date6").textContent = data.posts[5].creationDate;
+document.getElementById("post_description6").textContent = data.posts[5].description;
+document.getElementById("thumbnail6").src = data.posts[5].thumbnail;
+document.getElementById("tags15").textContent = data.posts[5].tags[0];
+document.getElementById("tags16").textContent = data.posts[5].tags[1];
+document.getElementById("tags17").textContent = data.posts[5].tags[2];
+
+document.getElementById("post_title7").textContent = data.posts[6].title;
+document.getElementById("post_date7").textContent = data.posts[6].creationDate;
+document.getElementById("post_description7").textContent = data.posts[6].description;
+document.getElementById("thumbnail7").src = data.posts[6].thumbnail;
+document.getElementById("tags18").textContent = data.posts[6].tags[0];
+document.getElementById("tags19").textContent = data.posts[6].tags[1];
+document.getElementById("tags20").textContent = data.posts[6].tags[2];
+
+document.getElementById("post_title8").textContent = data.posts[7].title;
+document.getElementById("post_date8").textContent = data.posts[7].creationDate;
+document.getElementById("post_description8").textContent = data.posts[7].description;
+document.getElementById("thumbnail8").src = data.posts[7].thumbnail;
+document.getElementById("tags21").textContent = data.posts[7].tags[0];
+document.getElementById("tags22").textContent = data.posts[7].tags[1];
+document.getElementById("tags23").textContent = data.posts[7].tags[2];
+
+document.getElementById("post_title9").textContent = data.posts[8].title;
+document.getElementById("post_date9").textContent = data.posts[8].creationDate;
+document.getElementById("post_description9").textContent = data.posts[8].description;
+document.getElementById("thumbnail9").src = data.posts[8].thumbnail;
+document.getElementById("tags24").textContent = data.posts[8].tags[0];
+document.getElementById("tags25").textContent = data.posts[8].tags[1];
+document.getElementById("tags26").textContent = data.posts[8].tags[2];
+
 document.getElementById("archives_container").textContent = data.archives[0].label;
 document.getElementById("archives_container2").textContent = data.archives[0].count;
 document.getElementById("archives_container3").textContent = data.archives[1].label;
 document.getElementById("archives_container4").textContent = data.archives[1].count;
+
+const div1 = document.getElementById("div1");
+const div2 = document.getElementById("div2");
+const prev_page = document.getElementById("prev_page");
+const next_page = document.getElementById("next_page");
+const bouton1 = document.getElementById("1");
+const bouton2 = document.getElementById("2");
+
+div2.style.display='none';
+bouton1.style.backgroundColor='#b91c1c';
+bouton1.style.color='white';
+prev_page.disabled=true;
+
+bouton2.addEventListener("click",function(){
+  div1.style.display="none";
+  div2.style.display="block";
+  div2.style.gap="40px";
+  div2.style.display="flex";
+  bouton2.style.backgroundColor="#b91c1c";
+  bouton2.style.color="white";
+  prev_page.disabled=false;
+  next_page.disabled=true;
+  bouton1.style.backgroundColor="white";
+  bouton1.style.color="black";
+});
+next_page.addEventListener("click",function(){
+  div1.style.display="none";
+  div2.style.display="block";
+  div2.style.gap="40px";
+  div2.style.display="flex";
+  bouton2.style.backgroundColor="#b91c1c";
+  bouton2.style.color="white";
+  prev_page.disabled=false;
+  next_page.disabled=true;
+  bouton1.style.backgroundColor="white";
+  bouton1.style.color="black";
+});
+bouton1.addEventListener("click",function(){
+  div1.style.display="block";
+  div1.style.gap="40px";
+  div1.style.display="flex";
+  div2.style.display="none";
+  bouton2.style.backgroundColor="white";
+  bouton2.style.color="black";
+  prev_page.disabled=true;
+  next_page.disabled=false;
+  bouton1.style.backgroundColor="#b91c1c";
+  bouton1.style.color="white";
+});
+prev_page.addEventListener("click",function(){
+  div1.style.display="block";
+  div1.style.gap="40px";
+  div1.style.display="flex";
+  div2.style.display="none";
+  bouton2.style.backgroundColor="white";
+  bouton2.style.color="black";
+  prev_page.disabled=true;
+  next_page.disabled=false;
+  bouton1.style.backgroundColor="#b91c1c";
+  bouton1.style.color="white";
+});
+
+const youtube_container = document.getElementById("youtube_container");
+data.youtubeVideos.forEach(video => {
+  const videoHTML = `
+    <div>
+      <iframe 
+        class="w-full h-40 rounded-lg"
+        src="https://www.youtube.com/embed/${video.id}"
+        title="${video.title}"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+      <p class="text-sm mt-2 font-['Poppins'] text-[#57534e]">${video.title}</p>
+    </div>
+  `;
+  youtube_container.innerHTML += videoHTML;
+});
