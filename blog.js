@@ -109,3 +109,40 @@ document.getElementById("post_description").textContent = data.posts[0].descript
 document.getElementById("thumbnail").src = data.posts[0].thumbnail;
 document.getElementById("tags1").textContent = data.posts[0].tags[0];
 document.getElementById("tags2").textContent = data.posts[0].tags[1];
+
+document.getElementById("post_title2").textContent = data.posts[1].title;
+document.getElementById("post_date2").textContent = data.posts[1].creationDate;
+document.getElementById("post_description2").textContent = data.posts[1].description;
+document.getElementById("thumbnail2").src = data.posts[1].thumbnail;
+document.getElementById("tags3").textContent = data.posts[1].tags[0];
+document.getElementById("tags4").textContent = data.posts[1].tags[1];
+document.getElementById("tags5").textContent = data.posts[1].tags[2];
+
+document.getElementById("post_title3").textContent = data.posts[2].title;
+document.getElementById("post_date3").textContent = data.posts[2].creationDate;
+document.getElementById("post_description3").textContent = data.posts[2].description;
+document.getElementById("thumbnail3").src = data.posts[2].thumbnail;
+document.getElementById("tags6").textContent = data.posts[2].tags[0];
+document.getElementById("tags7").textContent = data.posts[2].tags[1];
+document.getElementById("tags8").textContent = data.posts[2].tags[2];
+
+document.getElementById("post_title4").textContent = data.posts[3].title;
+document.getElementById("post_date4").textContent = data.posts[3].creationDate;
+document.getElementById("post_description4").textContent = data.posts[3].description;
+document.getElementById("thumbnail4").src = data.posts[3].thumbnail;
+document.getElementById("tags9").textContent = data.posts[3].tags[0];
+document.getElementById("tags10").textContent = data.posts[3].tags[1];
+document.getElementById("tags11").textContent = data.posts[3].tags[2];
+
+document.getElementById("post_title5").textContent = data.posts[4].title;
+document.getElementById("post_date5").textContent = data.posts[4].creationDate;
+document.getElementById("post_description5").textContent = data.posts[4].description;
+document.getElementById("thumbnail5").src = data.posts[4].thumbnail;
+document.getElementById("tags12").textContent = data.posts[4].tags[0];
+document.getElementById("tags13").textContent = data.posts[4].tags[1];
+document.getElementById("tags14").textContent = data.posts[4].tags[2];
+
+document.getElementById("archives_container").textContent = data.archives[0].label;
+document.getElementById("archives_container2").textContent = data.archives[0].count;
+document.getElementById("archives_container3").textContent = data.archives[1].label;
+document.getElementById("archives_container4").textContent = data.archives[1].count;
