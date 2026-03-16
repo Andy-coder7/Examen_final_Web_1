@@ -65,10 +65,6 @@
     { id: 15, role: 'customer', rating: 5, description: 'From scoping to delivery, the whole process was smooth and transparent. I would not hesitate to work together again.', author: 'Sitraka Andriamanantena', thumbnail: 'https://picsum.photos/200' },
   ],
 
-  // -------------------------
-  // BLOG
-  // -------------------------
-
   posts: [
     { id: 1, title: 'Join me at HEI', description: "Since 2021, I have been a part of HEI - Haute École d'Informatique, from the ground up, and until its evolution, struggles, and first students, I have been there, and it was a lot of fun.", creationDate: new Date('2026-03-08'), thumbnail: 'https://picsum.photos/400', tags: ['education', 'HEI'] },
     { id: 2, title: 'Teaching Databases the Right Way', description: "Too many students jump directly into ORMs without understanding relational thinking. In my courses, we start with normalization, constraints, and real SQL joins before touching any abstraction layer. Strong foundations create confident engineers.", creationDate: new Date('2026-01-12'), thumbnail: 'https://picsum.photos/400', tags: ['databases', 'SQL', 'education'] },
@@ -92,10 +88,6 @@
     { label: 'February 2026', slug: '2026-02', count: 1 },
   ],
 
-  // -------------------------
-  // RESEARCH
-  // -------------------------
-
   papers: [
     { id: 1, title: 'Automatic Generation of Thematic Maps Using Multi-Agent Systems', abstract: 'This paper presents an approach to automating the generation of thematic maps through multi-agent systems. Agents collaborate to process, interpret, and spatially organize geographic data, reducing the manual effort typically required in cartographic workflows. The system is demonstrated and evaluated within the GAMA simulation platform.', publishedDate: new Date('2024-11-01'), journal: 'GAMA Days 2024', authors: ['I. H. Maminiaina', 'H. Rakotonirainy', 'J. Dinaharison', 'T. Ramarozaka', 'A. Razafinimaro'], tags: ['multi-agent systems', 'cartography', 'GAMA'], url: 'https://hal.science/hal-04890215v1/file/Gama_days_2024_Maminiaina.pdf', pdfUrl: 'https://hal.science/hal-04890215v1/file/Gama_days_2024_Maminiaina.pdf' },
     { id: 2, title: 'Prise en compte des normes dans les comportements des agents', abstract: "Cette thèse de doctorat explore comment les normes sociales et organisationnelles peuvent être intégrées dans les comportements des agents autonomes. Elle propose un cadre formel permettant aux agents de percevoir, interpréter et respecter des normes dans des environnements multi-agents complexes, avec des applications en simulation sociale et en systèmes distribués.", publishedDate: new Date('2024-01-01'), journal: 'Université de Fianarantsoa — Thèse de doctorat en Informatique', authors: ['T. Ramarozaka'], tags: ['multi-agent systems', 'norms', 'PhD thesis'], url: 'https://agritrop.cirad.fr/610658/1/THESE%20Tokimahery%20FINALE.pdf', pdfUrl: 'https://agritrop.cirad.fr/610658/1/THESE%20Tokimahery%20FINALE.pdf' },
@@ -103,82 +95,97 @@
   ],
 
 };
-document.getElementById("post_title").textContent = data.posts[0].title;
-document.getElementById("post_date").textContent = data.posts[0].creationDate;
-document.getElementById("post_description").textContent = data.posts[0].description;
-document.getElementById("thumbnail").src = data.posts[0].thumbnail;
-document.getElementById("tags1").textContent = data.posts[0].tags[0];
-document.getElementById("tags2").textContent = data.posts[0].tags[1];
 
-document.getElementById("post_title2").textContent = data.posts[1].title;
-document.getElementById("post_date2").textContent = data.posts[1].creationDate;
-document.getElementById("post_description2").textContent = data.posts[1].description;
-document.getElementById("thumbnail2").src = data.posts[1].thumbnail;
-document.getElementById("tags3").textContent = data.posts[1].tags[0];
-document.getElementById("tags4").textContent = data.posts[1].tags[1];
-document.getElementById("tags5").textContent = data.posts[1].tags[2];
+const setText = (id, value) => {
+  const el = document.getElementById(id);
+  if (el) el.textContent = value;
+};
 
-document.getElementById("post_title3").textContent = data.posts[2].title;
-document.getElementById("post_date3").textContent = data.posts[2].creationDate;
-document.getElementById("post_description3").textContent = data.posts[2].description;
-document.getElementById("thumbnail3").src = data.posts[2].thumbnail;
-document.getElementById("tags6").textContent = data.posts[2].tags[0];
-document.getElementById("tags7").textContent = data.posts[2].tags[1];
-document.getElementById("tags8").textContent = data.posts[2].tags[2];
+const setSrc = (id, value) => {
+  const el = document.getElementById(id);
+  if (el) el.src = value;
+};
 
-document.getElementById("post_title4").textContent = data.posts[3].title;
-document.getElementById("post_date4").textContent = data.posts[3].creationDate;
-document.getElementById("post_description4").textContent = data.posts[3].description;
-document.getElementById("thumbnail4").src = data.posts[3].thumbnail;
-document.getElementById("tags9").textContent = data.posts[3].tags[0];
-document.getElementById("tags10").textContent = data.posts[3].tags[1];
-document.getElementById("tags11").textContent = data.posts[3].tags[2];
+const posts = data.posts;
 
-document.getElementById("post_title5").textContent = data.posts[4].title;
-document.getElementById("post_date5").textContent = data.posts[4].creationDate;
-document.getElementById("post_description5").textContent = data.posts[4].description;
-document.getElementById("thumbnail5").src = data.posts[4].thumbnail;
-document.getElementById("tags12").textContent = data.posts[4].tags[0];
-document.getElementById("tags13").textContent = data.posts[4].tags[1];
-document.getElementById("tags14").textContent = data.posts[4].tags[2];
+setText("post_title", posts[0].title);
+setText("post_date", posts[0].creationDate);
+setText("post_description", posts[0].description);
+setSrc("thumbnail", posts[0].thumbnail);
+setText("tags1", posts[0].tags[0]);
+setText("tags2", posts[0].tags[1]);
 
-document.getElementById("post_title6").textContent = data.posts[5].title;
-document.getElementById("post_date6").textContent = data.posts[5].creationDate;
-document.getElementById("post_description6").textContent = data.posts[5].description;
-document.getElementById("thumbnail6").src = data.posts[5].thumbnail;
-document.getElementById("tags15").textContent = data.posts[5].tags[0];
-document.getElementById("tags16").textContent = data.posts[5].tags[1];
-document.getElementById("tags17").textContent = data.posts[5].tags[2];
+setText("post_title2", posts[1].title);
+setText("post_date2", posts[1].creationDate);
+setText("post_description2", posts[1].description);
+setSrc("thumbnail2", posts[1].thumbnail);
+setText("tags3", posts[1].tags[0]);
+setText("tags4", posts[1].tags[1]);
+setText("tags5", posts[1].tags[2]);
 
-document.getElementById("post_title7").textContent = data.posts[6].title;
-document.getElementById("post_date7").textContent = data.posts[6].creationDate;
-document.getElementById("post_description7").textContent = data.posts[6].description;
-document.getElementById("thumbnail7").src = data.posts[6].thumbnail;
-document.getElementById("tags18").textContent = data.posts[6].tags[0];
-document.getElementById("tags19").textContent = data.posts[6].tags[1];
-document.getElementById("tags20").textContent = data.posts[6].tags[2];
+setText("post_title3", posts[2].title);
+setText("post_date3", posts[2].creationDate);
+setText("post_description3", posts[2].description);
+setSrc("thumbnail3", posts[2].thumbnail);
+setText("tags6", posts[2].tags[0]);
+setText("tags7", posts[2].tags[1]);
+setText("tags8", posts[2].tags[2]);
 
-document.getElementById("post_title8").textContent = data.posts[7].title;
-document.getElementById("post_date8").textContent = data.posts[7].creationDate;
-document.getElementById("post_description8").textContent = data.posts[7].description;
-document.getElementById("thumbnail8").src = data.posts[7].thumbnail;
-document.getElementById("tags21").textContent = data.posts[7].tags[0];
-document.getElementById("tags22").textContent = data.posts[7].tags[1];
-document.getElementById("tags23").textContent = data.posts[7].tags[2];
+setText("post_title4", posts[3].title);
+setText("post_date4", posts[3].creationDate);
+setText("post_description4", posts[3].description);
+setSrc("thumbnail4", posts[3].thumbnail);
+setText("tags9", posts[3].tags[0]);
+setText("tags10", posts[3].tags[1]);
+setText("tags11", posts[3].tags[2]);
 
-document.getElementById("post_title9").textContent = data.posts[8].title;
-document.getElementById("post_date9").textContent = data.posts[8].creationDate;
-document.getElementById("post_description9").textContent = data.posts[8].description;
-document.getElementById("thumbnail9").src = data.posts[8].thumbnail;
-document.getElementById("tags24").textContent = data.posts[8].tags[0];
-document.getElementById("tags25").textContent = data.posts[8].tags[1];
-document.getElementById("tags26").textContent = data.posts[8].tags[2];
+setText("post_title5", posts[4].title);
+setText("post_date5", posts[4].creationDate);
+setText("post_description5", posts[4].description);
+setSrc("thumbnail5", posts[4].thumbnail);
+setText("tags12", posts[4].tags[0]);
+setText("tags13", posts[4].tags[1]);
+setText("tags14", posts[4].tags[2]);
 
-document.getElementById("archives_container").textContent = data.archives[0].label;
-document.getElementById("archives_container2").textContent = data.archives[0].count;
-document.getElementById("archives_container3").textContent = data.archives[1].label;
-document.getElementById("archives_container4").textContent = data.archives[1].count;
+setText("post_title6", posts[5].title);
+setText("post_date6", posts[5].creationDate);
+setText("post_description6", posts[5].description);
+setSrc("thumbnail6", posts[5].thumbnail);
+setText("tags15", posts[5].tags[0]);
+setText("tags16", posts[5].tags[1]);
+setText("tags17", posts[5].tags[2]);
 
+setText("post_title7", posts[6].title);
+setText("post_date7", posts[6].creationDate);
+setText("post_description7", posts[6].description);
+setSrc("thumbnail7", posts[6].thumbnail);
+setText("tags18", posts[6].tags[0]);
+setText("tags19", posts[6].tags[1]);
+setText("tags20", posts[6].tags[2]);
+
+setText("post_title8", posts[7].title);
+setText("post_date8", posts[7].creationDate);
+setText("post_description8", posts[7].description);
+setSrc("thumbnail8", posts[7].thumbnail);
+setText("tags21", posts[7].tags[0]);
+setText("tags22", posts[7].tags[1]);
+setText("tags23", posts[7].tags[2]);
+
+setText("post_title9", posts[8].title);
+setText("post_date9", posts[8].creationDate);
+setText("post_description9", posts[8].description);
+setSrc("thumbnail9", posts[8].thumbnail);
+setText("tags24", posts[8].tags[0]);
+setText("tags25", posts[8].tags[1]);
+setText("tags26", posts[8].tags[2]);
+
+const archives = data.archives;
+
+setText("archives_container", archives[0].label);
+setText("archives_container2", archives[0].count);
+
+setText("archives_container3", archives[1].label);
+setText("archives_container4", archives[1].count);
 const div1 = document.getElementById("div1");
 const div2 = document.getElementById("div2");
 const prev_page = document.getElementById("prev_page");
