@@ -103,42 +103,59 @@
   ],
 
 };
-document.getElementById("aboutMe_part1").textContent=data.aboutMe_part1;
-document.getElementById("aboutMe_part2").textContent=data.aboutMe_part2;
+const setText = (id, value) => {
+  const el = document.getElementById(id);
+  if (el) el.textContent = value;
+};
+setText("aboutMe_part1", data.aboutMe_part1);
+setText("aboutMe_part2", data.aboutMe_part2);
 
-document.getElementById("9").textContent=data.overview[0].number;
-document.getElementById("annee_experience").textContent=data.overview[0].label;
-document.getElementById("800+").textContent=data.overview[1].number;
-document.getElementById("students_taught").textContent=data.overview[1].label;
-document.getElementById("20+").textContent=data.overview[2].number;
-document.getElementById("topics").textContent=data.overview[2].label;
+const overview = data.overview;
 
-document.getElementById("development").textContent=data.homeCourses[0].tag;
-document.getElementById("fundamentals").textContent=data.homeCourses[0].title;
-document.getElementById("online").textContent=data.homeCourses[0].mode;
-document.getElementById("8_weeks").textContent=data.homeCourses[0].duration;
-document.getElementById("translation").textContent=data.homeCourses[1].tag;
-document.getElementById("technical").textContent=data.homeCourses[1].title;
-document.getElementById("hybrid").textContent=data.homeCourses[1].mode;
-document.getElementById("6_weeks").textContent=data.homeCourses[1].duration;
-document.getElementById("research").textContent=data.homeCourses[2].tag;
-document.getElementById("academic").textContent=data.homeCourses[2].title;
-document.getElementById("offline").textContent=data.homeCourses[2].mode;
-document.getElementById("10_weeks").textContent=data.homeCourses[2].duration;
+setText("9", overview[0].number);
+setText("annee_experience", overview[0].label);
 
-document.getElementById("2026_present").textContent=data.experiences[0].year;
-document.getElementById("consultant").textContent=data.experiences[0].role;
-document.getElementById("independant").textContent=data.experiences[0].org;
-document.getElementById("advising").textContent=data.experiences[0].desc;
-document.getElementById("2024").textContent=data.experiences[2].year;
-document.getElementById("phd").textContent=data.experiences[2].role;
-document.getElementById("universite").textContent=data.experiences[2].org;
-document.getElementById("self_founded").textContent=data.experiences[2].desc;
-document.getElementById("2021_2026").textContent=data.experiences[1].year;
-document.getElementById("study").textContent=data.experiences[1].role;
-document.getElementById("hei").textContent=data.experiences[1].org;
-document.getElementById("responsible").textContent=data.experiences[1].desc;
-document.getElementById("2017_2020").textContent=data.experiences[3].year;
-document.getElementById("teacher").textContent=data.experiences[3].role;
-document.getElementById("esmia").textContent=data.experiences[3].org;
-document.getElementById("taught").textContent=data.experiences[3].desc;
+setText("800+", overview[1].number);
+setText("students_taught", overview[1].label);
+
+setText("20+", overview[2].number);
+setText("topics", overview[2].label);
+
+const courses = data.homeCourses;
+
+setText("development", courses[0].tag);
+setText("fundamentals", courses[0].title);
+setText("online", courses[0].mode);
+setText("8_weeks", courses[0].duration);
+
+setText("translation", courses[1].tag);
+setText("technical", courses[1].title);
+setText("hybrid", courses[1].mode);
+setText("6_weeks", courses[1].duration);
+
+setText("research", courses[2].tag);
+setText("academic", courses[2].title);
+setText("offline", courses[2].mode);
+setText("10_weeks", courses[2].duration);
+
+const exp = data.experiences;
+
+setText("2026_present", exp[0].year);
+setText("consultant", exp[0].role);
+setText("independant", exp[0].org);
+setText("advising", exp[0].desc);
+
+setText("2024", exp[2].year);
+setText("phd", exp[2].role);
+setText("universite", exp[2].org);
+setText("self_founded", exp[2].desc);
+
+setText("2021_2026", exp[1].year);
+setText("study", exp[1].role);
+setText("hei", exp[1].org);
+setText("responsible", exp[1].desc);
+
+setText("2017_2020", exp[3].year);
+setText("teacher", exp[3].role);
+setText("esmia", exp[3].org);
+setText("taught", exp[3].desc);
