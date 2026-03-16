@@ -76,13 +76,31 @@
     </div>
   </header>
   <main>
-    <section id="students-container"></section>
-    <section id="collaborator-container"></section>
-    <section id="costumers-container"></section>
+    <section class="flex items-center pt-20 gap-2"><div><span class="w-8 h-px bg-[#991b1b]"></span>
+      <p class="text-xs font-bold tracking-widest uppercase">STUDENTS</p></div>
+      <div id="students-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-10 bg-gray-50">
+
+      </div>
+    </section>
+    <section><div><span class="w-8 h-px bg-[#991b1b]"></span>
+      <p class="text-xs font-bold tracking-widest uppercase">COLLABORATORS</p></div>
+      <div id="collaborator-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-10 bg-gray-50">
+
+      </div>
+    </section>
+    <section>
+      <div><span class="w-8 h-px bg-[#991b1b]"></span>
+        <p class="text-xs font-bold tracking-widest uppercase">COSTUMERS</p>
+      </div>
+      <div id="costumers-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-10 bg-gray-50">
+
+      </div>
+    </section>
   </main>
   <footer class="bg-[#b91c1c] h-[30vh] flex flex-col items-center justify-center gap-8">
     <h1 class="text-white font-['Playfair_Display'] text-5xl font-extrabold">Join them.</h1>
-    <p class="text-white font-['Poppins'] items-center">Whether you want to learn, collaborate, or get something built - Tokimahery
+    <p class="text-white font-['Poppins'] items-center">Whether you want to learn, collaborate, or get something built -
+      Tokimahery
       is ready to help you move forward.</p>
     <div class="flex flex-row justify-between items-center gap-4 mt-6">
       <a class="text-white border w-44 h-12 rounded-full flex justify-center items-center hover:bg-white hover:text-[#b91c1c]"
@@ -94,4 +112,5 @@
 </body>
 <script src="tokimahery.data.js"></script>
 <script src="testimonials.js"></script>
+
 </html>
