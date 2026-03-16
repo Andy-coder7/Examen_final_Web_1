@@ -1,4 +1,4 @@
-let panier = []; // Notre liste vide
+let panier = []; 
 function afficherCours() {
     const container = document.getElementById('courses-container');
 
@@ -130,10 +130,10 @@ function filtrerLesCours() {
     
     data.courses = ancienneListe; 
 }
-// On crée une variable pour désigner la fenêtre
+
 const laFenetrePanier = document.getElementById('panierModale');
 function ajouterAuPanier(title, price) {
-    // 1. Vérification si le cours existe déjà
+    
     const existeDeja = panier.find(c => c.titre === title);
 
     if (existeDeja) {
@@ -141,40 +141,39 @@ function ajouterAuPanier(title, price) {
         return; 
     }
 
-    // 2. Ajout du cours au tableau
+    
     let objetCours = {
         titre: title,
         tarif: price
     };
     panier.push(objetCours);
     
-    // 3. MISE À JOUR DU COMPTEUR (Badge)
-    // On récupère l'élément par son ID et on y écrit le nombre d'éléments du panier
+   
     const badge = document.getElementById('cart-count');
     if (badge) {
         badge.innerText = panier.length;
     }
 
-    // On garde juste le log pour nous aider à débugger si besoin
+    
     console.log("Panier mis à jour :", panier);
 }
 
 
-// 2. Fonction pour OUVRIR et REMPLIR
+
 function ouvrirPanier() {
     const fenetre = document.getElementById('panier');
     const zoneTexte = document.getElementById('listePanier');
-    const zoneTotal = document.getElementById('totalPrix'); // On attrape la zone du prix
+    const zoneTotal = document.getElementById('totalPrix'); 
     
     fenetre.classList.remove('hidden');
     fenetre.classList.add('flex');
     
     if (panier.length > 0) {
         zoneTexte.innerHTML = ""; 
-        let somme = 0; // On commence à zéro
+        let somme = 0; 
 
         for (let i = 0; i < panier.length; i++) {
-            // On ajoute le prix de chaque cours à la somme
+           
             somme = somme + panier[i].tarif;
 
             zoneTexte.innerHTML += `
