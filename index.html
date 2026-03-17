@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
@@ -12,9 +12,8 @@
 
 <body>
 
-
-  <nav class="bg-[#991b1b] flex justify-between h-[10vh] items-center fixed w-full z-50">
-    <div class="flex ml-10">
+  <nav class="bg-[#991b1b] flex flex-col lg:flex-row justify-between lg:h-[10vh] items-center fixed w-full z-50 py-4 lg:py-0">
+    <div class="flex lg:ml-10 mb-4 lg:mb-0">
       <a href="index.html" class="flex gap-2">
         <span class="w-1 bg-white h-10 inline-block"></span>
         <div>
@@ -30,245 +29,187 @@
         </div>
       </a>
     </div>
-    <div>
-      <ul class="flex gap-8">
-        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']"
-            href="index.html">HOME</a><span
-            class="absolute -bottom-2 left-1/2  w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-px"></span>
-        </li>
-        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="blog.html">BLOG</a><span
-            class="absolute -bottom-2 left-1/2  w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-px"></span>
-        </li>
-        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="courses.html">COURSES</a><span
-            class="absolute -bottom-2 left-1/2  w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-px"></span>
-        </li>
-        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="testimonials.html">TESTIMONIALS</a><span
-            class="absolute -bottom-2 left-1/2  w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-px"></span>
-        </li>
-        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="research.html">RESEARCH</a><span
-            class="absolute -bottom-2 left-1/2  w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-px"></span>
-        </li>
+    <div class="mb-4 lg:mb-0">
+      <ul class="flex flex-wrap justify-center gap-6 lg:gap-8">
+        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="index.html">HOME</a><span class="absolute -bottom-2 left-1/2  w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-px"></span></li>
+        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="blog.html">BLOG</a><span class="absolute -bottom-2 left-1/2  w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-px"></span></li>
+        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="courses.html">COURSES</a><span class="absolute -bottom-2 left-1/2  w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-px"></span></li>
+        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="testimonials.html">TESTIMONIALS</a><span class="absolute -bottom-2 left-1/2  w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-px"></span></li>
+        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="research.html">RESEARCH</a><span class="absolute -bottom-2 left-1/2  w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-px"></span></li>
       </ul>
     </div>
-    <div class="mr-10">
-      <input class="text-white text-xm font-['Poppins'] placeholder-[#a8a29e] placeholder:font-thin" type="text" placeholder="Search anything...">
+    <div class="lg:mr-10 flex items-center gap-4">
+      <input class="text-white text-xm font-['Poppins'] placeholder-[#a8a29e] placeholder:font-thin bg-transparent border-b border-white/20 lg:border-none" type="text" placeholder="Search anything...">
       <a onclick="ouvrirLePanier()" href=""><i class="fa-solid fa-basket-shopping text-white fa-2x"></i></a>
     </div>
   </nav>
 
-
-<header class=" mx-auto flex items-center justify-between min-h-screen px-12 bg-[#f9f6f1] w-full">
-  <div class="max-w-xl h-full ml-[20vw]">
+  <header class="flex flex-col lg:flex-row items-center justify-center gap-20 min-h-screen px-12 bg-[#f9f6f1] w-full pt-[30vh] lg:pt-0">
+    <div class="max-w-xl h-full lg:ml-[8vw] text-center lg:text-left ">
       <div>
-        <p class="text-[#991b1b] text-sm tracking-widest mb-6 flex items-center gap-3 font-['Poppins']">
+        <p class="text-[#991b1b] text-sm tracking-widest mb-6 flex items-center justify-center lg:justify-start gap-3 font-['Poppins']">
           <span class="w-10 h-0.5 bg-[#991b1b]"></span>
           PORTFOLIO & SERVICES
         </p>
-      </div>    
-      <div>
-        <h1 class="font-['Playfair_Display'] text-6xl text-gray-900 leading-tight">
-          Tokimahery
-        </h1>
-      </div>  
-      <div>
-        <h1 class="font-['Playfair_Display'] italic text-6xl text-[#991b1b] mb-6">
-          Ramarozaka
-        </h1>
       </div>
       <div>
-        <p class="text-gray-500 text-xm tracking-widest mb-6 font-['Poppins']">
-          CONSULTANT · TEACHER · DEVELOPER · TRANSLATOR · PHD
-        </p>
+        <h1 class="font-['Playfair_Display'] text-6xl text-gray-900 leading-tight">Tokimahery</h1>
+      </div>
+      <div>
+        <h1 class="font-['Playfair_Display'] italic text-6xl text-[#991b1b] mb-6">Ramarozaka</h1>
+      </div>
+      <div>
+        <p class="text-gray-500 text-xm tracking-widest mb-6 font-['Poppins']">CONSULTANT · TEACHER · DEVELOPER · TRANSLATOR · PHD</p>
       </div>
       <div>
         <p class="text-gray-500 mb-8 font-['DM_Sans'] text-xl">
-          Bridging knowledge across disciplines — from cutting-edge software
-          development to academic research and multilingual expertise.
+          Bridging knowledge across disciplines — from cutting-edge software development to academic research and multilingual expertise.
         </p>
       </div>
-        <div class="flex gap-4 mb-6">
-          <a class="bg-[#b91c1c] text-white px-6 py-3 rounded-lg shadow hover:bg-[#991b1b]" href="courses.html">
-            Book a course 
-          </a>
-          <a class="border border-gray-300 px-6 py-3 rounded-lg hover:bg-gray-100 hover:border-black" href="#aboutMe">
-          About me
-          </a>
-        </div>
-        <div class="mb-6">
-          <a href="" class="text-[#991b1b] text-sm font-medium underline hover:text-[#b91c1c]">
-            ASK FOR A COLLABORATION →
-          </a>
-        </div>
-        <div class="flex gap-4 h-full mb-6">
-          <a href=""><i class="fa-brands fa-facebook fa-lg text-gray-500 transition hover:-translate-y-1 hover:text-[#991b1b]"></i></a>
-          <a href=""><i class="fa-brands fa-youtube fa-lg text-gray-500 transition hover:-translate-y-1 hover:text-[#991b1b]"></i></a>
-          <a href=""><i class="fa-brands fa-instagram fa-lg text-gray-500 transition hover:-translate-y-1 hover:text-[#991b1b]"></i></a>
-          <a href=""><i class="fa-brands fa-linkedin fa-lg text-gray-500 transition hover:-translate-y-1 hover:text-[#991b1b]" id="aboutMe"></i></a>
-        </div>  
+      <div class="flex flex-wrap justify-center lg:justify-start gap-4 mb-6">
+        <a class="bg-[#b91c1c] text-white px-6 py-3 rounded-lg shadow hover:bg-[#991b1b]" href="courses.html">Book a course </a>
+        <a class="border border-gray-300 px-6 py-3 rounded-lg hover:bg-gray-100 hover:border-black" href="#aboutMe">About me</a>
       </div>
-      <div class="relative mr-[20vw]">
-        <div class="absolute inset-0 rounded-full border border-[#991b1b] scale-105  "></div>
-          <img src="square-image.jpg" class="w-[17vw] shadow-[10px_10px_0_#f9f6f1] object-cover rounded-full">
+      <div class="mb-6">
+        <a href="" class="text-[#991b1b] text-sm font-medium underline hover:text-[#b91c1c]">ASK FOR A COLLABORATION →</a>
       </div>
-</header>
-
-
-<section class="max-w-7xl mx-auto px-12 py-32 grid grid-cols-2 gap-24 items-start h-[60vh]" >
-  <div>
-    <p class="flex items-center gap-3 text-xs [word-spacing:0.3rem] text-gray-500 mb-6 font-['Poppins']">
-      <span class="w-10 h-0.5 bg-[#991b1b]"></span>
-      WHO I AM
-    </p>
-    <h2 class="font-['Playfair_Display'] font-black text-6xl text-gray-900 leading-tight" >
-      About
-    </h2>
-    <h2 class="font-['Playfair_Display'] italic font-black text-6xl text-gray-900">
-      me
-    </h2>
-  </div>
-  <div class="max-w-xl">
-    <p id="aboutMe_part1" class="text-[#78716c] mb-6 font-['Poppins'] leading-relaxed"></p>
-    <p id="aboutMe_part2" class="text-[#78716c] mb-10 font-['Poppins'] leading-relaxed"></p>
-    <hr class="mb-10 border-gray-200">
-    <div class="flex gap-20">
-      <div class="-space-y-2 ">
-        <p id="9" class="text-[#991b1b] text-3xl font-['Playfair_Display'] font-bold"></p>
-        <p id="annee_experience" class="text-xl  text-gray-500"></p>
-      </div>
-      <div class="-space-y-2 ">
-        <p id="800+" class="text-[#991b1b] text-3xl font-['Playfair_Display'] font-bold"></p>
-        <p id="students_taught" class="text-xl text-[#78716c]"></p>
-      </div>
-      <div class="-space-y-2 ">
-        <p id="20+" class="text-[#991b1b] text-3xl font-['Playfair_Display'] font-bold"></p>
-        <p id="topics" class="text-xl text-[#78716c]"></p>
+      <div class="flex justify-center lg:justify-start gap-4 h-full mb-6">
+        <a href=""><i class="fa-brands fa-facebook fa-lg text-gray-500 transition hover:-translate-y-1 hover:text-[#991b1b]"></i></a>
+        <a href=""><i class="fa-brands fa-youtube fa-lg text-gray-500 transition hover:-translate-y-1 hover:text-[#991b1b]"></i></a>
+        <a href=""><i class="fa-brands fa-instagram fa-lg text-gray-500 transition hover:-translate-y-1 hover:text-[#991b1b]"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin fa-lg text-gray-500 transition hover:-translate-y-1 hover:text-[#991b1b]" id="aboutMe"></i></a>
       </div>
     </div>
-  </div>
-</section>
+    <div class="relative mt-12 lg:mt-0 lg:mr-[10vw] ">
+      <div class="absolute inset-0 rounded-full border border-[#991b1b] scale-105"></div>
+      <img src="square-image.jpg" class="w-[40vw] lg:w-[17vw] shadow-[10px_10px_0_#f9f6f1] object-cover rounded-full">
+    </div>
+  </header>
 
-
-<section class="bg-[#f9f6f1] items-center justify-center flex flex-col h-[70vh] gap-10">
-  <div>
-    <p class="text-[#78716c] tracking-wide font-['Poppins'] text-xs flex gap-4 justify-center items-center "><span class="h-0.5 w-10 bg-[#991b1b] inline-block"></span>LEARNING
-    <span class="h-0.5 w-10 bg-[#991b1b] inline-block"></span></p>
-  </div>
-  <div class="items-center flex flex-col">
-    <p class="font-extrabold font-['DM_Sans'] text-5xl">Courses online</p>
-    <p class="font-extrabold font-['DM_Sans'] text-5xl">and offline</p>
-  </div>
-  <div class="flex gap-5 w-full justify-center">
-    <div class="w-[21vw] bg-white rounded-2xl h-[22vh] shadow-lg  flex flex-col justify-center duration-300 hover:-translate-y-3">
-      <div class="flex flex-col gap-4 h-[9vh]">
-        <div class="bg-[#b91c1c] rounded-2xl flex text-center ml-4 w-32 items-center justify-center h-8
-        max-w-[18vw]"><p id="development" class="text-white"></p></div>
-        <div class="pl-4"><p id="fundamentals" class="font-bold font-['Playfair_Display'] text-2xl"></p></div>
-      </div>
-      <div class="flex flex-col gap-4">
-        <br>
-        <hr class="bg-[#78716c] max-w-[18vw] pl-4">
-        <div class="max-w-[18vw] pl-4 flex justify-between"><p id="online" class="text-[#78716c]"></p><p class="text-[#78716c]" id="8_weeks"></p></div>
-      </div>
-      </div>
-    <div class="w-[21vw] bg-white rounded-2xl h-[22vh] shadow-lg  flex flex-col justify-center duration-300 hover:-translate-y-3">
-      <div class="flex flex-col gap-4 h-[9vh]">
-         <div class="bg-black rounded-2xl flex text-center ml-4 w-32 items-center justify-center h-8
-        max-w-[18vw]"><p id="translation" class="text-white leading-loose"></p></div>
-        <div class="pl-4 max-w-[18vw] "><p id="technical" class="font-bold font-['Playfair_Display'] leading-none text-2xl"></p></div>
-      </div>
-      <div class="flex flex-col gap-4">
-        <br>
-        <hr class="bg-[#78716c] max-w-[18vw] pl-4">
-        <div class="max-w-[18vw] pl-4 flex justify-between"><p id="hybrid" class="text-[#78716c]"></p><p class="text-[#78716c]" id="6_weeks"></p></div>
-      </div>
-      </div>
-    <div class="w-[21vw] bg-white rounded-2xl h-[22vh] shadow-lg  flex flex-col justify-center duration-300 hover:-translate-y-3">
-      <div class="flex flex-col gap-4">
-        <div class="bg-[#78716c] rounded-2xl flex text-center ml-4 w-32 items-center justify-center h-8
-        max-w-[18vw]"><p id="research" class="text-white"></p></div>
-        <div class="pl-4"><p id="academic" class="font-bold font-['Playfair_Display'] text-2xl"></p></div>
-      </div>
-      <div class="flex flex-col gap-4">
-        <br>
-        <hr class="bg-[#78716c] max-w-[18vw] pl-4">
-        <div class="max-w-[18vw] pl-4 flex justify-between"><p id="offline" class="text-[#78716c]"></p><p class="text-[#78716c]" id="10_weeks"></p></div>
-      </div>
-      </div>
-  </div>
-  <div>
-    <a class="text-[#991b1b] hover:text-[#b91c1c] underline text-sm tracking-wide font-['Poppins']" href="courses.html">VIEW ALL COURSES →</a>
-  </div>
-</section>
-
-
-<section class="py-28 px-10">
-  <div class="max-w-6xl mx-auto">
-    <div class="flex items-center gap-4 mb-6">
-      <span class="w-10 h-0.5 bg-[#b91c1c]"></span>
-      <p class="uppercase tracking-[0.3em] text-xs text-[#78716c] font-['Poppins']">
-        Background
+  <section class="max-w-7xl mx-auto px-12 py-32 grid grid-cols-1 lg:grid-cols-2 gap-24 items-start text-center lg:text-left">
+    <div>
+      <p class="flex items-center justify-center lg:justify-start gap-3 text-xs [word-spacing:0.3rem] text-gray-500 mb-6 font-['Poppins']">
+        <span class="w-10 h-0.5 bg-[#991b1b]"></span>
+        WHO I AM
       </p>
+      <h2 class="font-['Playfair_Display'] font-black text-6xl text-gray-900 leading-tight">About</h2>
+      <h2 class="font-['Playfair_Display'] italic font-black text-6xl text-gray-900">me</h2>
     </div>
-    <h2 class="font-['Playfair_Display'] text-5xl text-[#1c1917] mb-20">
-      Experience
-    </h2>
-   <div class="grid grid-cols-2 gap-24">
-      <div class="border-l border-[#d6d3d1] pl-10 space-y-16">
-        <div class="relative">
-           <span class="absolute -ml-10 top-1 w-0.5 h-36 bg-[#b91c1c]"></span>
-          <p class="text-[#b91c1c] text-sm tracking-wide font-['Poppins'] mb-2" id="2026_present">
-          </p>
-          <h3 class="text-lg font-semibold text-[#1c1917] font-['Poppins']" id="consultant">
-          </h3>
-          <p class="uppercase text-xs text-[#78716c] tracking-wider mb-3 font-['Poppins']" id="independant">
-          </p>
-          <p class="text-[#57534e] text-sm leading-relaxed font-['Poppins']" id="advising">
-          </p>
+    <div class="max-w-xl mx-auto lg:mx-0">
+      <p id="aboutMe_part1" class="text-[#78716c] mb-6 font-['Poppins'] leading-relaxed"></p>
+      <p id="aboutMe_part2" class="text-[#78716c] mb-10 font-['Poppins'] leading-relaxed"></p>
+      <hr class="mb-10 border-gray-200">
+      <div class="flex flex-wrap justify-center lg:justify-start gap-10 lg:gap-20">
+        <div class="-space-y-2">
+          <p id="9" class="text-[#991b1b] text-3xl font-['Playfair_Display'] font-bold"></p>
+          <p id="annee_experience" class="text-xl text-gray-500"></p>
         </div>
-        <div>
-          <p class="text-[#b91c1c] text-sm tracking-wide font-['Poppins'] mb-2" id="2024">
-          </p>
-          <h3 class="text-lg font-semibold text-[#1c1917] font-['Poppins']" id="phd">
-          </h3>
-          <p class="uppercase text-xs text-[#78716c] tracking-wider mb-3 font-['Poppins']" id="universite">
-          </p>
-          <p class="text-[#57534e] text-sm leading-relaxed font-['Poppins']" id="self_founded">
-          </p>
+        <div class="-space-y-2">
+          <p id="800+" class="text-[#991b1b] text-3xl font-['Playfair_Display'] font-bold"></p>
+          <p id="students_taught" class="text-xl text-[#78716c]"></p>
         </div>
-      </div>
-      <div class="border-l border-[#e7e5e4] pl-10 space-y-16">
-        <div>
-          <p class="text-[#b91c1c] text-sm tracking-wide font-['Poppins'] mb-2" id="2021_2026">
-          </p>
-          <h3 class="text-lg font-semibold text-[#1c1917] font-['Poppins']" id="study">
-          </h3>
-          <p class="uppercase text-xs text-[#78716c] tracking-wider mb-3 font-['Poppins']" id="hei">
-          </p>
-          <p class="text-[#57534e] text-sm leading-relaxed font-['Poppins']" id="responsible">
-          </p>
-        </div>
-        <div>
-          <p class="text-[#b91c1c] text-sm tracking-wide font-['Poppins'] mb-2" id="2017_2020">
-          </p>
-          <h3 class="text-lg font-semibold text-[#1c1917] font-['Poppins']" id="teacher">
-          </h3>
-          <p class="uppercase text-xs text-[#78716c] tracking-wider mb-3 font-['Poppins']" id="esmia">
-          </p>
-          <p class="text-[#57534e] text-sm leading-relaxed font-['Poppins']" id="taught">
-          </p>
+        <div class="-space-y-2">
+          <p id="20+" class="text-[#991b1b] text-3xl font-['Playfair_Display'] font-bold"></p>
+          <p id="topics" class="text-xl text-[#78716c]"></p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <section class="bg-[#f9f6f1] items-center justify-center flex flex-col py-20 lg:h-[70vh] gap-10">
+    <div>
+      <p class="text-[#78716c] tracking-wide font-['Poppins'] text-xs flex gap-4 justify-center items-center"><span class="h-0.5 w-10 bg-[#991b1b] inline-block"></span>LEARNING
+      <span class="h-0.5 w-10 bg-[#991b1b] inline-block"></span></p>
+    </div>
+    <div class="items-center flex flex-col text-center">
+      <p class="font-extrabold font-['DM_Sans'] text-5xl">Courses online</p>
+      <p class="font-extrabold font-['DM_Sans'] text-5xl">and offline</p>
+    </div>
+    <div class="flex flex-col lg:flex-row gap-5 w-full justify-center items-center">
+      <div class="w-[80vw] lg:w-[21vw] bg-white rounded-2xl p-8 lg:h-[22vh] shadow-lg flex flex-col justify-center duration-300 hover:-translate-y-3">
+        <div class="flex flex-col gap-4">
+          <div class="bg-[#b91c1c] rounded-2xl flex text-center w-32 items-center justify-center h-8 mx-auto lg:mx-0"><p id="development" class="text-white"></p></div>
+          <div class="text-center lg:text-left"><p id="fundamentals" class="font-bold font-['Playfair_Display'] text-2xl"></p></div>
+        </div>
+        <div class="flex flex-col gap-4 mt-6">
+          <hr class="bg-[#78716c]">
+          <div class="flex justify-between"><p id="online" class="text-[#78716c]"></p><p class="text-[#78716c]" id="8_weeks"></p></div>
+        </div>
+      </div>
+      <div class="w-[80vw] lg:w-[21vw] bg-white rounded-2xl p-8 lg:h-[22vh] shadow-lg flex flex-col justify-center duration-300 hover:-translate-y-3">
+        <div class="flex flex-col gap-4">
+          <div class="bg-black rounded-2xl flex text-center w-32 items-center justify-center h-8 mx-auto lg:mx-0"><p id="translation" class="text-white leading-loose"></p></div>
+          <div class="text-center lg:text-left"><p id="technical" class="font-bold font-['Playfair_Display'] leading-none text-2xl"></p></div>
+        </div>
+        <div class="flex flex-col gap-4 mt-6">
+          <hr class="bg-[#78716c]">
+          <div class="flex justify-between"><p id="hybrid" class="text-[#78716c]"></p><p class="text-[#78716c]" id="6_weeks"></p></div>
+        </div>
+      </div>
+      <div class="w-[80vw] lg:w-[21vw] bg-white rounded-2xl p-8 lg:h-[22vh] shadow-lg flex flex-col justify-center duration-300 hover:-translate-y-3">
+        <div class="flex flex-col gap-4">
+          <div class="bg-[#78716c] rounded-2xl flex text-center w-32 items-center justify-center h-8 mx-auto lg:mx-0"><p id="research" class="text-white"></p></div>
+          <div class="text-center lg:text-left"><p id="academic" class="font-bold font-['Playfair_Display'] text-2xl"></p></div>
+        </div>
+        <div class="flex flex-col gap-4 mt-6">
+          <hr class="bg-[#78716c]">
+          <div class="flex justify-between"><p id="offline" class="text-[#78716c]"></p><p class="text-[#78716c]" id="10_weeks"></p></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <a class="text-[#991b1b] hover:text-[#b91c1c] underline text-sm tracking-wide font-['Poppins']" href="courses.html">VIEW ALL COURSES →</a>
+    </div>
+  </section>
 
-<footer class="bg-[#b91c1c] h-[30vh] flex flex-col items-center justify-center gap-8">
-  <h1 class="text-white font-['Playfair_Display'] text-5xl font-extrabold">Ready to collaborate?</h1>
-  <p class="text-white font-['Poppins']">Whether you're looking for a course,a consultation, or a translation - let's talk.</p>
-  <a class="text-white border w-44 h-12 rounded-full flex justify-center items-center hover:bg-white hover:text-[#b91c1c]" href="">GET IN TOUCH</a>
-</footer>
-<script src="tokimahery.data.js"></script>
-<script src="index.js"></script>
+  <section class="py-28 px-10">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center justify-center lg:justify-start gap-4 mb-6">
+        <span class="w-10 h-0.5 bg-[#b91c1c]"></span>
+        <p class="uppercase tracking-[0.3em] text-xs text-[#78716c] font-['Poppins']">Background</p>
+      </div>
+      <h2 class="font-['Playfair_Display'] text-5xl text-[#1c1917] mb-20 text-center lg:text-left">Experience</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
+        <div class="border-l border-[#d6d3d1] pl-10 space-y-16">
+          <div class="relative">
+            <span class="absolute -ml-10 top-1 w-0.5 h-full bg-[#b91c1c]"></span>
+            <p class="text-[#b91c1c] text-sm tracking-wide font-['Poppins'] mb-2" id="2026_present"></p>
+            <h3 class="text-lg font-semibold text-[#1c1917] font-['Poppins']" id="consultant"></h3>
+            <p class="uppercase text-xs text-[#78716c] tracking-wider mb-3 font-['Poppins']" id="independant"></p>
+            <p class="text-[#57534e] text-sm leading-relaxed font-['Poppins']" id="advising"></p>
+          </div>
+          <div class="relative">
+            <p class="text-[#b91c1c] text-sm tracking-wide font-['Poppins'] mb-2" id="2024"></p>
+            <h3 class="text-lg font-semibold text-[#1c1917] font-['Poppins']" id="phd"></h3>
+            <p class="uppercase text-xs text-[#78716c] tracking-wider mb-3 font-['Poppins']" id="universite"></p>
+            <p class="text-[#57534e] text-sm leading-relaxed font-['Poppins']" id="self_founded"></p>
+          </div>
+        </div>
+        <div class="border-l border-[#e7e5e4] pl-10 space-y-16">
+          <div>
+            <p class="text-[#b91c1c] text-sm tracking-wide font-['Poppins'] mb-2" id="2021_2026"></p>
+            <h3 class="text-lg font-semibold text-[#1c1917] font-['Poppins']" id="study"></h3>
+            <p class="uppercase text-xs text-[#78716c] tracking-wider mb-3 font-['Poppins']" id="hei"></p>
+            <p class="text-[#57534e] text-sm leading-relaxed font-['Poppins']" id="responsible"></p>
+          </div>
+          <div>
+            <p class="text-[#b91c1c] text-sm tracking-wide font-['Poppins'] mb-2" id="2017_2020"></p>
+            <h3 class="text-lg font-semibold text-[#1c1917] font-['Poppins']" id="teacher"></h3>
+            <p class="uppercase text-xs text-[#78716c] tracking-wider mb-3 font-['Poppins']" id="esmia"></p>
+            <p class="text-[#57534e] text-sm leading-relaxed font-['Poppins']" id="taught"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-[#b91c1c] min-h-[30vh] py-12 flex flex-col items-center justify-center gap-8 text-center px-4">
+    <h1 class="text-white font-['Playfair_Display'] text-5xl font-extrabold">Ready to collaborate?</h1>
+    <p class="text-white font-['Poppins']">Whether you're looking for a course, a consultation, or a translation - let's talk.</p>
+    <a class="text-white border w-44 h-12 rounded-full flex justify-center items-center hover:bg-white hover:text-[#b91c1c]" href="">GET IN TOUCH</a>
+  </footer>
+
+  <script src="tokimahery.data.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>

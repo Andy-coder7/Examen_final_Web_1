@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BLOG</title>
   <link href="output.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-     <nav class="bg-[#991b1b] flex justify-between h-[10vh] items-center fixed w-full z-50">
-    <div class="flex ml-10">
+<body class="bg-white">
+
+  <nav class="bg-[#991b1b] flex flex-col lg:flex-row justify-between lg:h-[10vh] items-center fixed w-full z-50 py-4 lg:py-0">
+    <div class="flex lg:ml-10 mb-4 lg:mb-0">
       <a href="index.html" class="flex gap-2">
         <span class="w-1 bg-white h-10 inline-block"></span>
         <div>
@@ -26,285 +27,110 @@
         </div>
       </a>
     </div>
-    <div>
-      <ul class="flex gap-8">
-        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']"
-            href="index.html">HOME</a><span
-            class="absolute -bottom-2 left-1/2 h-1 w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-[1px]"></span>
-        </li>
-        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="blog.html">BLOG</a><span
-            class="absolute -bottom-2 left-1/2 h-1 w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-[1px]"></span>
-        </li>
-        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="courses.html">COURSES</a><span
-            class="absolute -bottom-2 left-1/2 h-1 w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-[1px]"></span>
-        </li>
-        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="testimonials.html">TESTIMONIALS</a><span
-            class="absolute -bottom-2 left-1/2 h-1 w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-[1px]"></span>
-        </li>
-        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="research.html">RESEARCH</a><span
-            class="absolute -bottom-2 left-1/2 h-1 w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-[1px]"></span>
-        </li>
+    <div class="mb-4 lg:mb-0">
+      <ul class="flex flex-wrap justify-center gap-6 lg:gap-8">
+        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="index.html">HOME</a><span class="absolute -bottom-2 left-1/2 w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-[1px]"></span></li>
+        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="blog.html">BLOG</a><span class="absolute -bottom-2 left-1/2 w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-[1px]"></span></li>
+        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="courses.html">COURSES</a><span class="absolute -bottom-2 left-1/2 w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-[1px]"></span></li>
+        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="testimonials.html">TESTIMONIALS</a><span class="absolute -bottom-2 left-1/2 w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-[1px]"></span></li>
+        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="research.html">RESEARCH</a><span class="absolute -bottom-2 left-1/2 w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-[1px]"></span></li>
       </ul>
     </div>
-    <div class="mr-10">
-      <input class="text-white text-xm font-['Poppins'] placeholder-[#a8a29e] placeholder:font-thin" type="text" placeholder="Search anything...">
+    <div class="lg:mr-10 flex items-center gap-4">
+      <input class="text-white text-xm font-['Poppins'] placeholder-[#a8a29e] placeholder:font-thin bg-transparent border-b border-white/20 lg:border-none w-32 lg:w-auto" type="text" placeholder="Search anything...">
       <a href=""><i class="fa-solid fa-basket-shopping text-white fa-2x"></i></a>
     </div>
   </nav>
 
-
-  <section class="py-20">
-
-  <div class="flex flex-col items-center justify-center mx-auto text-center mb-20 h-[30vh] bg-[#f9f6f1]">
-    <div class="flex items-center justify-center gap-4 mb-6">
-      <span class="w-10 h-px bg-[#b91c1c]"></span>
-      <p class="uppercase text-xs tracking-[0.3em] text-[#78716c] font-['Poppins']">
-        WRITING
-      </p>
-      <span class="w-10 h-px bg-[#b91c1c]"></span>
+  <section class="py-16 max-lg:pt-44 max-[449px]:pt-56 ">
+    <div class="flex flex-col items-center justify-center mx-auto text-center mb-20 h-[30vh] bg-[#f9f6f1] px-4">
+      <div class="flex items-center justify-center gap-4 mb-6">
+        <span class="w-10 h-px bg-[#b91c1c]"></span>
+        <p class="uppercase text-xs tracking-[0.3em] text-[#78716c] font-['Poppins']">WRITING</p>
+        <span class="w-10 h-px bg-[#b91c1c]"></span>
+      </div>
+      <h1 class="text-5xl font-bold font-['Playfair_Display'] text-[#1c1917]">The <span class="text-[#b91c1c]">blog</span></h1>
+      <p class="mt-6 text-[#78716c] max-w-xl mx-auto font-['Poppins']">Thoughts on teaching, software engineering, languages, and everything in between.</p>
     </div>
 
-    <h1 class="text-5xl font-bold font-['Playfair_Display'] text-[#1c1917]">
-      The <span class="text-[#b91c1c]">blog</span>
-    </h1>
+    <div class="max-w-[90vw] mx-auto flex flex-col lg:flex-row gap-12">
 
-    <p class="mt-6 text-[#78716c] max-w-xl mx-auto font-['Poppins']">
-      Thoughts on teaching, software engineering, languages, and everything in between.
-    </p>
-  </div>
-
-  <!-- CONTAINER -->
-  <div class="max-w-[90vw] mx-auto flex gap-12">
-
-    <!-- POSTS (LEFT SIDE) -->
-    <div class="flex flex-col gap-10 w-[80%]">
-      <div class="gap-10 flex flex-col" id="div1">
-        <article class="flex gap-6 bg-white p-6 rounded-xl shadow-2xl">
-          <img id="thumbnail" class="w-48 h-44 object-cover rounded-xl">
-        <div>
-            <h2 id="post_title" class="text-xl text-[#b91c1c] font-semibold font-['Poppins']"></h2>
-            <p id="post_date" class="text-sm mt-1 font-['Poppins']"></p>
-            <p id="post_description" class="text-[#57534e] mt-2 text-sm leading-relaxed font-['Poppins']"></p>
-            <div class="flex mt-12 gap-5">
-            <p id="tags1" class="text-white font-['Poppins'] bg-blue-400 w-32 flex items-center justify-center rounded-full"></p>
-            <p id="tags2" class="text-white font-['Poppins'] bg-blue-400 w-20 flex items-center justify-center rounded-full"></p>
-          </div>
-        </div>
-      </article>
-      <article class="flex gap-6 bg-white p-6 rounded-xl shadow-2xl">
-        <img id="thumbnail2" class="w-48 h-44 object-cover rounded-xl">
-        <div>
-          <h2 id="post_title2" class="text-xl text-[#b91c1c] font-semibold font-['Poppins']"></h2>
-          <p id="post_date2" class="text-sm mt-1 font-['Poppins']"></p>
-          <p id="post_description2" class="text-[#57534e] mt-2 text-sm leading-relaxed font-['Poppins']"></p>
-          <div class="flex mt-12 gap-5">
-            <p id="tags3" class="text-white font-['Poppins'] bg-blue-400 w-32 flex items-center justify-center rounded-full"></p>
-            <p id="tags4" class="text-white font-['Poppins'] bg-blue-400 w-20 flex items-center justify-center rounded-full"></p>
-            <p id="tags5" class="text-white font-['Poppins'] bg-blue-400 w-32 flex items-center justify-center rounded-full"></p>
-          </div>
-        </div>
-      </article>
-      <article class="flex gap-6 bg-white p-6 rounded-xl shadow-2xl">
-        <img id="thumbnail3" class="w-48 h-44 object-cover rounded-xl">
-        <div>
-          <h2 id="post_title3" class="text-xl text-[#b91c1c] font-semibold font-['Poppins']"></h2>
-          <p id="post_date3" class="text-sm mt-1 font-['Poppins']"></p>
-            <p id="post_description3" class="text-[#57534e] mt-2 text-sm leading-relaxed font-['Poppins']"></p>
-          <div class="flex mt-12 gap-5">
-            <p id="tags6" class="text-white font-['Poppins'] bg-blue-400 w-16 flex items-center justify-center rounded-full"></p>
-            <p id="tags7" class="text-white font-['Poppins'] bg-blue-400 w-52 flex items-center justify-center rounded-full"></p>
-            <p id="tags8" class="text-white font-['Poppins'] bg-blue-400 w-32 flex items-center justify-center rounded-full"></p>
-          </div>
-        </div>
-      </article>
-      <article class="flex gap-6 bg-white p-6 rounded-xl shadow-2xl">
-        <img id="thumbnail4" class="w-48 h-44 object-cover rounded-xl">
-        <div>
-            <h2 id="post_title4" class="text-xl text-[#b91c1c] font-semibold font-['Poppins']"></h2>
-            <p id="post_date4" class="text-sm mt-1 font-['Poppins']"></p>
-            <p id="post_description4" class="text-[#57534e] mt-2 text-sm leading-relaxed font-['Poppins']"></p>
-          <div class="flex mt-12 gap-5">
-            <p id="tags9" class="text-white font-['Poppins'] bg-blue-400 w-16 flex items-center justify-center rounded-full"></p>
-            <p id="tags10" class="text-white font-['Poppins'] bg-blue-400 w-28 flex items-center justify-center rounded-full"></p>
-            <p id="tags11" class="text-white font-['Poppins'] bg-blue-400 w-32 flex items-center justify-center rounded-full"></p>
-          </div>
-        </div>
-      </article>
-      <article class="flex gap-6 bg-white p-6 rounded-xl shadow-2xl">
-        <img id="thumbnail5" class="w-48 h-44 object-cover rounded-xl">
-        <div>
-            <h2 id="post_title5" class="text-xl text-[#b91c1c] font-semibold font-['Poppins']"></h2>
-            <p id="post_date5" class="text-sm mt-1 font-['Poppins']"></p>
-            <p id="post_description5" class="text-[#57534e] mt-2 text-sm leading-relaxed font-['Poppins']"></p>
-            <div class="flex mt-12 gap-5">
-              <p id="tags12" class="text-white font-['Poppins'] bg-blue-400 w-48 flex items-center justify-center rounded-full"></p>
-              <p id="tags13" class="text-white font-['Poppins'] bg-blue-400 w-48 flex items-center justify-center rounded-full"></p>
-              <p id="tags14" class="text-white font-['Poppins'] bg-blue-400 w-28 flex items-center justify-center rounded-full"></p>
+      <div class="flex flex-col gap-10 w-full lg:w-[80%]">
+        
+        <div class="gap-10 flex flex-col" id="div1">
+          <article class="flex flex-col lg:flex-row gap-6 bg-white p-6 rounded-xl shadow-2xl items-center lg:items-start">
+            <img id="thumbnail" class="w-full lg:w-48 h-44 object-cover rounded-xl">
+            <div class="text-center lg:text-left">
+              <h2 id="post_title" class="text-xl text-[#b91c1c] font-semibold font-['Poppins']"></h2>
+              <p id="post_date" class="text-sm mt-1 font-['Poppins']"></p>
+              <p id="post_description" class="text-[#57534e] mt-2 text-sm leading-relaxed font-['Poppins']"></p>
+              <div class="flex flex-wrap justify-center lg:justify-start mt-6 lg:mt-12 gap-5">
+                <p id="tags1" class="text-white font-['Poppins'] bg-blue-400 w-32 flex items-center justify-center rounded-full h-8"></p>
+                <p id="tags2" class="text-white font-['Poppins'] bg-blue-400 w-20 flex items-center justify-center rounded-full h-8"></p>
+              </div>
             </div>
+          </article>
+          <article class="flex flex-col lg:flex-row gap-6 bg-white p-6 rounded-xl shadow-2xl items-center lg:items-start"><img id="thumbnail2" class="w-full lg:w-48 h-44 object-cover rounded-xl"><div class="text-center lg:text-left"><h2 id="post_title2" class="text-xl text-[#b91c1c] font-semibold font-['Poppins']"></h2><p id="post_date2" class="text-sm mt-1 font-['Poppins']"></p><p id="post_description2" class="text-[#57534e] mt-2 text-sm leading-relaxed font-['Poppins']"></p><div class="flex flex-wrap justify-center lg:justify-start mt-12 gap-5"><p id="tags3" class="text-white bg-blue-400 w-32 flex items-center justify-center rounded-full h-8"></p><p id="tags4" class="text-white bg-blue-400 w-20 flex items-center justify-center rounded-full h-8"></p><p id="tags5" class="text-white bg-blue-400 w-32 flex items-center justify-center rounded-full h-8"></p></div></div></article>
+          <article class="flex flex-col lg:flex-row gap-6 bg-white p-6 rounded-xl shadow-2xl items-center lg:items-start"><img id="thumbnail3" class="w-full lg:w-48 h-44 object-cover rounded-xl"><div class="text-center lg:text-left"><h2 id="post_title3" class="text-xl text-[#b91c1c] font-semibold font-['Poppins']"></h2><p id="post_date3" class="text-sm mt-1 font-['Poppins']"></p><p id="post_description3" class="text-[#57534e] mt-2 text-sm leading-relaxed font-['Poppins']"></p><div class="flex flex-wrap justify-center lg:justify-start mt-12 gap-5"><p id="tags6" class="text-white bg-blue-400 w-16 flex items-center justify-center rounded-full h-8"></p><p id="tags7" class="text-white bg-blue-400 w-52 flex items-center justify-center rounded-full h-8"></p><p id="tags8" class="text-white bg-blue-400 w-32 flex items-center justify-center rounded-full h-8"></p></div></div></article>
+          <article class="flex flex-col lg:flex-row gap-6 bg-white p-6 rounded-xl shadow-2xl items-center lg:items-start"><img id="thumbnail4" class="w-full lg:w-48 h-44 object-cover rounded-xl"><div class="text-center lg:text-left"><h2 id="post_title4" class="text-xl text-[#b91c1c] font-semibold font-['Poppins']"></h2><p id="post_date4" class="text-sm mt-1 font-['Poppins']"></p><p id="post_description4" class="text-[#57534e] mt-2 text-sm leading-relaxed font-['Poppins']"></p><div class="flex flex-wrap justify-center lg:justify-start mt-12 gap-5"><p id="tags9" class="text-white bg-blue-400 w-16 flex items-center justify-center rounded-full h-8"></p><p id="tags10" class="text-white bg-blue-400 w-28 flex items-center justify-center rounded-full h-8"></p><p id="tags11" class="text-white bg-blue-400 w-32 flex items-center justify-center rounded-full h-8"></p></div></div></article>
+          <article class="flex flex-col lg:flex-row gap-6 bg-white p-6 rounded-xl shadow-2xl items-center lg:items-start"><img id="thumbnail5" class="w-full lg:w-48 h-44 object-cover rounded-xl"><div class="text-center lg:text-left"><h2 id="post_title5" class="text-xl text-[#b91c1c] font-semibold font-['Poppins']"></h2><p id="post_date5" class="text-sm mt-1 font-['Poppins']"></p><p id="post_description5" class="text-[#57534e] mt-2 text-sm leading-relaxed font-['Poppins']"></p><div class="flex flex-wrap justify-center lg:justify-start mt-12 gap-5"><p id="tags12" class="text-white bg-blue-400 w-48 flex items-center justify-center rounded-full h-8"></p><p id="tags13" class="text-white bg-blue-400 w-48 flex items-center justify-center rounded-full h-8"></p><p id="tags14" class="text-white bg-blue-400 w-28 flex items-center justify-center rounded-full h-8"></p></div></div></article>
+        </div>
+
+        <div class="gap-10 flex flex-col" id="div2">
+          <article class="flex flex-col lg:flex-row gap-6 bg-white p-6 rounded-xl shadow-2xl items-center lg:items-start"><img id="thumbnail6" class="w-full lg:w-48 h-44 object-cover rounded-xl"><div class="text-center lg:text-left"><h2 id="post_title6" class="text-xl text-[#b91c1c] font-semibold font-['Poppins']"></h2><p id="post_date6" class="text-sm mt-1 font-['Poppins']"></p><p id="post_description6" class="text-[#57534e] mt-2 text-sm leading-relaxed font-['Poppins']"></p><div class="flex flex-wrap justify-center lg:justify-start mt-12 gap-5"><p id="tags15" class="text-white bg-blue-400 w-32 flex items-center justify-center rounded-full h-8"></p><p id="tags16" class="text-white bg-blue-400 w-16 flex items-center justify-center rounded-full h-8"></p><p id="tags17" class="text-white bg-blue-400 w-24 flex items-center justify-center rounded-full h-8"></p></div></div></article>
+          <article class="flex flex-col lg:flex-row gap-6 bg-white p-6 rounded-xl shadow-2xl items-center lg:items-start"><img id="thumbnail7" class="w-full lg:w-48 h-44 object-cover rounded-xl"><div class="text-center lg:text-left"><h2 id="post_title7" class="text-xl text-[#b91c1c] font-semibold font-['Poppins']"></h2><p id="post_date7" class="text-sm mt-1 font-['Poppins']"></p><p id="post_description7" class="text-[#57534e] mt-2 text-sm leading-relaxed font-['Poppins']"></p><div class="flex flex-wrap justify-center lg:justify-start mt-12 gap-5"><p id="tags18" class="text-white bg-blue-400 w-24 flex items-center justify-center rounded-full h-8"></p><p id="tags19" class="text-white bg-blue-400 w-20 flex items-center justify-center rounded-full h-8"></p><p id="tags20" class="text-white bg-blue-400 w-24 flex items-center justify-center rounded-full h-8"></p></div></div></article>
+          <article class="flex flex-col lg:flex-row gap-6 bg-white p-6 rounded-xl shadow-2xl items-center lg:items-start"><img id="thumbnail8" class="w-full lg:w-48 h-44 object-cover rounded-xl"><div class="text-center lg:text-left"><h2 id="post_title8" class="text-xl text-[#b91c1c] font-semibold font-['Poppins']"></h2><p id="post_date8" class="text-sm mt-1 font-['Poppins']"></p><p id="post_description8" class="text-[#57534e] mt-2 text-sm leading-relaxed font-['Poppins']"></p><div class="flex flex-wrap justify-center lg:justify-start mt-12 gap-5"><p id="tags21" class="text-white bg-blue-400 w-14 flex items-center justify-center rounded-full h-8"></p><p id="tags22" class="text-white bg-blue-400 w-44 flex items-center justify-center rounded-full h-8"></p><p id="tags23" class="text-white bg-blue-400 w-32 flex items-center justify-center rounded-full h-8"></p></div></div></article>
+          <article class="flex flex-col lg:flex-row gap-6 bg-white p-6 rounded-xl shadow-2xl items-center lg:items-start"><img id="thumbnail9" class="w-full lg:w-48 h-44 object-cover rounded-xl"><div class="text-center lg:text-left"><h2 id="post_title9" class="text-xl text-[#b91c1c] font-semibold font-['Poppins']"></h2><p id="post_date9" class="text-sm mt-1 font-['Poppins']"></p><p id="post_description9" class="text-[#57534e] mt-2 text-sm leading-relaxed font-['Poppins']"></p><div class="flex flex-wrap justify-center lg:justify-start mt-12 gap-5"><p id="tags24" class="text-white bg-blue-400 w-28 flex items-center justify-center rounded-full h-8"></p><p id="tags25" class="text-white bg-blue-400 w-28 flex items-center justify-center rounded-full h-8"></p><p id="tags26" class="text-white bg-blue-400 w-24 flex items-center justify-center rounded-full h-8"></p></div></div></article>
+        </div>
+
+        <div class="flex justify-center items-center gap-3 mt-10">
+          <button id="prev_page" class="px-4 py-2 text-sm text-[#78716c] border rounded-lg hover:border-[#b91c1c] hover:text-[#b91c1c] disabled:pointer-events-none disabled:text-gray-300">← Prev</button>
+          <div class="flex gap-2">
+            <button class="border w-10 lg:w-[2vw] flex items-center justify-center h-10 rounded-2xl" id="1">1</button>
+            <button class="border w-10 lg:w-[2vw] flex items-center justify-center h-10 rounded-2xl" id="2">2</button>
           </div>
-        </article>
+          <button id="next_page" class="px-4 py-2 text-sm text-[#78716c] border rounded-lg hover:border-[#b91c1c] hover:text-[#b91c1c] disabled:pointer-events-none disabled:text-gray-300">Next →</button>
+        </div>
       </div>
-      <div class="gap-10 flex flex-col" id="div2">
-        <article class="flex gap-6 bg-white p-6 rounded-xl shadow-2xl">
-          <img id="thumbnail6" class="w-48 h-44 object-cover rounded-xl">
-        <div>
-          <h2 id="post_title6" class="text-xl text-[#b91c1c] font-semibold font-['Poppins']"></h2>
-          <p id="post_date6" class="text-sm mt-1 font-['Poppins']"></p>
-          <p id="post_description6" class="text-[#57534e] mt-2 text-sm leading-relaxed font-['Poppins']"></p>
-          <div class="flex mt-12 gap-5">
-            <p id="tags15" class="text-white font-['Poppins'] bg-blue-400 w-32 flex items-center justify-center rounded-full"></p>
-            <p id="tags16" class="text-white font-['Poppins'] bg-blue-400 w-16 flex items-center justify-center rounded-full"></p>
-            <p id="tags17" class="text-white font-['Poppins'] bg-blue-400 w-24 flex items-center justify-center rounded-full"></p>
+
+      <aside class="w-full lg:w-[20%] space-y-10">
+        <div class="bg-[#f9f6f1] p-6 rounded-xl shadow-sm">
+          <div class="flex items-center gap-3 mb-6"><span class="w-8 h-px bg-[#b91c1c]"></span><p class="uppercase text-xs tracking-widest text-[#78716c] font-['Poppins']">ARCHIVES</p></div>
+          <div class="space-y-4">
+            <div class="flex justify-between"><p id="archives_container" class="font-['Poppins'] text-[#57534e]"></p><p id="archives_container2" class="font-['Poppins'] text-[#57534e]"></p></div>
+            <div class="flex justify-between"><p id="archives_container3" class="font-['Poppins'] text-[#57534e]"></p><p id="archives_container4" class="font-['Poppins'] text-[#57534e]"></p></div>
           </div>
         </div>
-      </article>
-      <article class="flex gap-6 bg-white p-6 rounded-xl shadow-2xl">
-        <img id="thumbnail7" class="w-48 h-44 object-cover rounded-xl">
-        <div>
-          <h2 id="post_title7" class="text-xl text-[#b91c1c] font-semibold font-['Poppins']"></h2>
-          <p id="post_date7" class="text-sm mt-1 font-['Poppins']"></p>
-          <p id="post_description7" class="text-[#57534e] mt-2 text-sm leading-relaxed font-['Poppins']"></p>
-          <div class="flex mt-12 gap-5">
-            <p id="tags18" class="text-white font-['Poppins'] bg-blue-400 w-24 flex items-center justify-center rounded-full"></p>
-            <p id="tags19" class="text-white font-['Poppins'] bg-blue-400 w-20 flex items-center justify-center rounded-full"></p>
-            <p id="tags20" class="text-white font-['Poppins'] bg-blue-400 w-24 flex items-center justify-center rounded-full"></p>
-          </div>
+
+        <div class="bg-[#f9f6f1] p-6 rounded-xl shadow-sm">
+          <div class="flex items-center gap-3 mb-6"><span class="w-8 h-px bg-[#b91c1c]"></span><p class="uppercase text-xs tracking-widest text-[#78716c] font-['Poppins']">NEWSLETTER</p></div>
+          <p class="text-sm text-[#78716c] mb-4 font-['Poppins']">Get new articles straight to your inbox. No spam, ever.</p>
+          <input type="email" class="w-full border border-[#e7e5e4] rounded-lg px-4 py-2 text-sm mb-4 focus:outline-none" placeholder="your@email.com">
+          <button class="w-full bg-[#b91c1c] text-white py-2 rounded-lg text-sm font-semibold">SUBSCRIBE</button>
         </div>
-      </article>
-      <article class="flex gap-6 bg-white p-6 rounded-xl shadow-2xl">
-        <img id="thumbnail8" class="w-48 h-44 object-cover rounded-xl">
-        <div>
-          <h2 id="post_title8" class="text-xl text-[#b91c1c] font-semibold font-['Poppins']"></h2>
-          <p id="post_date8" class="text-sm mt-1 font-['Poppins']"></p>
-          <p id="post_description8" class="text-[#57534e] mt-2 text-sm leading-relaxed font-['Poppins']"></p>
-          <div class="flex mt-12 gap-5">
-            <p id="tags21" class="text-white font-['Poppins'] bg-blue-400 w-14 flex items-center justify-center rounded-full"></p>
-            <p id="tags22" class="text-white font-['Poppins'] bg-blue-400 w-44 flex items-center justify-center rounded-full"></p>
-            <p id="tags23" class="text-white font-['Poppins'] bg-blue-400 w-32 flex items-center justify-center rounded-full"></p>
+
+        <div class="bg-[#f9f6f1] p-6 rounded-xl shadow-sm">
+          <div class="flex mb-6 flex-col">
+            <div class="flex items-center gap-3 mb-6 "><span class="w-8 h-px bg-[#b91c1c]"></span><p class="uppercase text-xs tracking-widest text-[#78716c] font-['Poppins']">ON YOUTUBE</p></div>
+            <p class="text-[#78716c] font-['Poppins'] text-sm">Latest videos on the channel</p>
           </div>
+          <div id="youtube_container" class="space-y-4"></div>
+          <a href="" class="text-[#b91c1c] text-sm font-semibold flex items-center gap-2 mt-4">VIEW ALL VIDEOS →</a>
         </div>
-      </article>
-      <article class="flex gap-6 bg-white p-6 rounded-xl shadow-2xl">
-        <img id="thumbnail9" class="w-48 h-44 object-cover rounded-xl">
-        <div>
-          <h2 id="post_title9" class="text-xl text-[#b91c1c] font-semibold font-['Poppins']"></h2>
-            <p id="post_date9" class="text-sm mt-1 font-['Poppins']"></p>
-            <p id="post_description9" class="text-[#57534e] mt-2 text-sm leading-relaxed font-['Poppins']"></p>
-          <div class="flex mt-12 gap-5">
-            <p id="tags24" class="text-white font-['Poppins'] bg-blue-400 w-28 flex items-center justify-center rounded-full"></p>
-            <p id="tags25" class="text-white font-['Poppins'] bg-blue-400 w-28 flex items-center justify-center rounded-full"></p>
-            <p id="tags26" class="text-white font-['Poppins'] bg-blue-400 w-24 flex items-center justify-center rounded-full"></p>
-          </div>
-        </div>
-      </article>
+      </aside>
     </div>
-      
-      <!-- PAGINATION -->
-      <div class="flex justify-center items-center gap-3 mt-10">
-        <button id="prev_page" class="px-4 py-2 text-sm text-[#78716c] border rounded-lg hover:border-[#b91c1c] hover:text-[#b91c1c] disabled:pointer-events-none
-        disabled:text-gray-300 ">
-          ← Prev
-        </button>
+  </section>
 
-        <div class="flex gap-2">
-          <button class="border w-[2vw] flex items-center justify-center h-10 rounded-2xl" id="1">1</button>
-          <button class="border w-[2vw] flex items-center justify-center h-10 rounded-2xl" id="2">2</button>
-        </div>
-
-        <button id="next_page" class="px-4 py-2 text-sm text-[#78716c] border rounded-lg hover:border-[#b91c1c] hover:text-[#b91c1c] disabled:pointer-events-none
-        disabled:text-gray-300 ">
-          Next →
-        </button>
-      </div>
-
+  <footer class="bg-[#b91c1c] min-h-[30vh] py-10 flex flex-col items-center justify-center gap-8 text-center px-4">
+    <h1 class="text-white font-['Playfair_Display'] text-4xl lg:text-5xl font-extrabold">Want to go deeper?</h1>
+    <p class="text-white font-['Poppins']">Explore the courses or get in touch for a consultation.</p>
+    <div class="flex flex-col lg:flex-row gap-6 lg:gap-10">
+      <a class="text-[#b91c1c] bg-white border w-44 h-12 rounded-full flex justify-center items-center hover:bg-[#b91c1c] hover:text-white transition-all" href="courses.html">BROWSE COURSES</a>
+      <a class="text-white border w-44 h-12 rounded-full flex justify-center items-center hover:bg-white hover:text-[#b91c1c] transition-all" href="">COLLABORATE</a>
     </div>
+  </footer>
 
-
-    <!-- ASIDE (RIGHT SIDE) -->
-    <aside class="w-[20%] space-y-10">
-
-      <!-- ARCHIVES -->
-      <div class="bg-[#f9f6f1] p-6 rounded-xl shadow-sm">
-        <div class="flex items-center gap-3 mb-6">
-          <span class="w-8 h-px bg-[#b91c1c]"></span>
-          <p class="uppercase text-xs tracking-widest text-[#78716c] font-['Poppins']">
-            ARCHIVES
-          </p>
-        </div>
-
-        <div class="space-y-4">
-          <div class="flex justify-between">
-            <p id="archives_container" class="font-['Poppins'] text-[#57534e]"></p>
-            <p id="archives_container2" class="font-['Poppins'] text-[#57534e]"></p>
-          </div>
-          <div class="flex justify-between">
-            <p id="archives_container3" class="font-['Poppins'] text-[#57534e]"></p>
-            <p id="archives_container4" class="font-['Poppins'] text-[#57534e]"></p>
-          </div>
-        </div>
-      </div>
-
-      <!-- NEWSLETTER -->
-      <div class="bg-[#f9f6f1] p-6 rounded-xl shadow-sm">
-        <div class="flex items-center gap-3 mb-6">
-          <span class="w-8 h-px bg-[#b91c1c]"></span>
-          <p class="uppercase text-xs tracking-widest text-[#78716c] font-['Poppins']">
-            NEWSLETTER
-          </p>
-        </div>
-
-        <p class="text-sm text-[#78716c] mb-4 font-['Poppins']">
-          Get new articles straight to your inbox. No spam, ever.
-        </p>
-
-        <input
-          type="email"
-          class="w-full border border-[#e7e5e4] rounded-lg px-4 py-2 text-sm mb-4 focus:outline-none"
-          placeholder="your@email.com">
-
-        <button class="w-full bg-[#b91c1c] text-white py-2 rounded-lg text-sm font-semibold">
-          SUBSCRIBE
-        </button>
-      </div>
-
-      <!-- YOUTUBE -->
-      <div class="bg-[#f9f6f1] p-6 rounded-xl shadow-sm">
-        <div class="flex mb-6 flex-col">
-          <div class="flex items-center gap-3 mb-6 ">
-            <span class="w-8 h-px bg-[#b91c1c]"></span>
-            <p class="uppercase text-xs tracking-widest text-[#78716c] font-['Poppins']">
-              ON YOUTUBE
-            </p>
-          </div>
-          <p class="text-[#78716c] font-['Poppins'] text-sm">Latest videos on the channel</p>
-        </div>
-
-        <div id="youtube_container" class="space-y-4">
-
-        </div>
-
-        <a href="" class="text-[#b91c1c] text-sm font-semibold flex items-center gap-2 mt-4">
-          VIEW ALL VIDEOS →
-        </a>
-      </div>
-
-    </aside>
-
-  </div>
-</section>
-
-
-
-<footer class="bg-[#b91c1c] h-[30vh] flex flex-col items-center justify-center gap-8">
-  <h1 class="text-white font-['Playfair_Display'] text-5xl font-extrabold">Want to go deeper?</h1>
-  <p class="text-white font-['Poppins']">Explore the courses or get in touch for a consultation.</p>
-  <div class="flex gap-10">
-    <a class="text-[#b91c1c] bg-white border w-44 h-12 rounded-full flex justify-center items-center hover:bg-[#b91c1c] hover:text-white" href="courses.html">BROWSE COURSES</a>
-    <a class="text-white border w-44 h-12 rounded-full flex justify-center items-center hover:bg-white hover:text-[#b91c1c]" href="">COLLABORATE</a>
-  </div>
-</footer>
-
-<script src="tokimahery.data.js"></script>
-<script src="blog.js"></script>
-</body>
+  <script src="tokimahery.data.js"></script>
+  <script src="blog.js"></script>
+</body> 
 </html>
