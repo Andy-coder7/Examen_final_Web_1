@@ -2,15 +2,29 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Get in touch</title>
+  <link rel="stylesheet" href="output.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Agrandissement global du contenu à partir de 700px */
+    @media (min-width: 700px) {
+      html {
+        font-size: 1.2rem; /* Augmente la taille de base (échelle relative) */
+      }
+      .max-w-xl {
+        max-width: 45rem; /* Elargit le conteneur pour suivre l'agrandissement du texte */
+      }
+    }
+  </style>
 </head>
 <body class="bg-[#f9f6f1] font-['DM_Sans']">
 
-  <section class="min-h-screen flex items-center justify-center px-4 sm:px-6">
+  <section class="min-h-screen flex items-center justify-center px-4 py-10">
    
-    <div class="bg-white p-6 sm:p-8 md:p-10 rounded-2xl shadow-lg w-full max-w-xl">
+    <div class="bg-white p-6 rounded-2xl shadow-lg w-full max-w-xl">
         <a href="index.html" class="text-[#991b1b] text-lg sm:text-xl hover:text-[#b91c1c]">← Go back</a>
 
       <h2 class="text-3xl sm:text-4xl mb-2 text-[#1a1a1a] font-['Playfair_Display']">
@@ -31,7 +45,7 @@
             class="w-full sm:w-1/2 border border-[#e5e0d8] rounded-lg p-3 focus:outline-none focus:border-[#991b1b]">
         </div>
 
-        <input type="text" placeholder="Number (or email)"
+        <input type="number" placeholder="Number (or email)"
           class="w-full border border-[#e5e0d8] rounded-lg p-3 focus:outline-none focus:border-[#991b1b]">
 
         <input type="email" placeholder="Email (or number)"
