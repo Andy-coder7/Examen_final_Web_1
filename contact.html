@@ -8,26 +8,27 @@
 </head>
 <body class="bg-[#f9f6f1] font-['DM_Sans']">
 
-  <section class="min-h-screen flex items-center justify-center px-6">
+  <section class="min-h-screen flex items-center justify-center px-4 sm:px-6">
    
-    <div class="bg-white p-10 rounded-2xl shadow-lg w-full max-w-xl">
-        <a href="index.html" class="text-[#991b1b] text-xl hover:text-[#b91c1c]">← Go back</a>
-      <h2 class="text-4xl mb-2 text-[#1a1a1a] font-['Playfair_Display']">
+    <div class="bg-white p-6 sm:p-8 md:p-10 rounded-2xl shadow-lg w-full max-w-xl">
+        <a href="index.html" class="text-[#991b1b] text-lg sm:text-xl hover:text-[#b91c1c]">← Go back</a>
+
+      <h2 class="text-3xl sm:text-4xl mb-2 text-[#1a1a1a] font-['Playfair_Display']">
         Get in touch
       </h2>
 
-      <p class="text-[#78716c] mb-6">
+      <p class="text-[#78716c] mb-6 text-sm sm:text-base">
         I will reply as soon as possible
       </p>
 
       <form id="contactForm" class="space-y-4">
 
-        <div class="flex gap-4">
+        <div class="flex flex-col sm:flex-row gap-4">
           <input type="text" placeholder="First name *"
-            class="w-1/2 border border-[#e5e0d8] rounded-lg p-3 focus:outline-none focus:border-[#991b1b]">
+            class="w-full sm:w-1/2 border border-[#e5e0d8] rounded-lg p-3 focus:outline-none focus:border-[#991b1b]">
 
           <input type="text" placeholder="Last name *"
-            class="w-1/2 border border-[#e5e0d8] rounded-lg p-3 focus:outline-none focus:border-[#991b1b]">
+            class="w-full sm:w-1/2 border border-[#e5e0d8] rounded-lg p-3 focus:outline-none focus:border-[#991b1b]">
         </div>
 
         <input type="text" placeholder="Number (or email)"
@@ -38,20 +39,21 @@
 
         <textarea rows="4" placeholder="Your message *"
           class="w-full border border-[#e5e0d8] rounded-lg p-3 focus:outline-none focus:border-[#991b1b]"></textarea>
+
         <button type="submit"
           class="w-full bg-[#991b1b] text-white py-3 rounded-lg hover:bg-[#7f1d1d] transition">
           Send
         </button>
 
       </form>
+
       <p id="confirmationMessage"
-         class="hidden mt-4 text-center font-medium">
+         class="hidden mt-4 text-center font-medium text-sm sm:text-base">
       </p>
 
     </div>
   </section>
 
- 
   <script src="contact.js"></script>
 
 </body>
