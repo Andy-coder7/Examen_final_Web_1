@@ -1,0 +1,28 @@
+/* Fade doux entre les pages */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.4s;     /* 400ms → agréable sans être lent */
+  animation-timing-function: ease-in-out;
+}
+
+::view-transition-old(root) {
+  animation-name: fade-out;
+}
+
+::view-transition-new(root) {
+  animation-name: fade-in;
+}
+
+@keyframes fade-out {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+::view-transition-old(root),
+::view-transition-new(root) {
+  background: #ffffff;   /* ou #f9f6f1 comme ton bg principal */
+}

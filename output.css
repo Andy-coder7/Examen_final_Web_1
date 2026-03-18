@@ -927,3 +927,6 @@
     }
   }
 }
+@view-transition {
+  navigation: auto;
+}

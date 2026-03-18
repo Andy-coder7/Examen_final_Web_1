@@ -7,6 +7,7 @@
   <link href="output.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="transition.css">
 </head>
 <body class="bg-white">
 
@@ -38,7 +39,11 @@
     </div>
     <div class="lg:mr-10 flex items-center gap-4">
       <input class="text-white text-xm font-['Poppins'] placeholder-[#a8a29e] placeholder:font-thin bg-transparent border-b border-white/20 lg:border-none w-32 lg:w-auto" type="text" placeholder="Search anything...">
-      <a href=""><i class="fa-solid fa-basket-shopping text-white fa-2x"></i></a>
+      <a onclick="ouvrirPanier()" class="relative"><i class="fa-solid fa-basket-shopping text-white fa-2x"></i><span
+          id="cart-count"
+          class="absolute -top-2 -right-2 bg-white text-[#991b1b] text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center shadow-sm">
+          0
+        </span></a>
     </div>
   </nav>
 
@@ -132,8 +137,34 @@
       <a class="text-white border w-44 h-12 rounded-full flex justify-center items-center hover:bg-white hover:text-[#b91c1c] transition-all" href="contact.html">COLLABORATE</a>
     </div>
   </footer>
+<div id="panier" class="hidden fixed inset-0 bg-black/50 items-center justify-center z-100">
+    <div class="bg-white p-6 rounded-2xl w-96 relative">
+      <button onclick="fermerPanier()" class="absolute top-4 right-4 text-gray-400">✕</button>
 
+      <h2 class="text-xl font-bold mb-4">Your cart</h2>
+
+      <div id="listePanier" class="space-y-4 text-center">
+        <p class="text-gray-400 italic">Your cart is empty.</p>
+      </div>
+      <div class="border-t mt-4 pt-4 flex justify-between font-bold text-[#991b1b]">
+        <span>Total:</span>
+        <span id="totalPrix">0 Ar</span>
+      </div>
+      <div class="boutons-panier mt-6 pt-4 border-t border-gray-200 flex gap-3 justify-end hidden">
+        <button id="vider-panier"
+          class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 text-sm font-semibold transition-all">
+          Vider panier
+        </button>
+        <button id="finaliser-achat"
+          class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 text-sm font-bold uppercase tracking-wide shadow-lg hover:shadow-xl transition-all">
+          Finaliser achat
+        </button>
+      </div>
+
+    </div>
+  </div>
   <script src="tokimahery.data.js"></script>
   <script src="blog.js"></script>
+  <script src="courses.js"></script>
 </body> 
 </html>
