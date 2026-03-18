@@ -1,3 +1,22 @@
+const subscribe = document.getElementById("subscribe");
+const after_subscribe = document.getElementById("after_subscribe");
+const input = document.getElementById("input");
+const no_input = document.getElementById("no_input");
+
+after_subscribe.style.display = "none";
+no_input.style.display = "none";
+
+subscribe.addEventListener("click",function(){
+  if(input.value.trim() === "" ){
+no_input.style.display = "block"
+  } else {
+    subscribe.style.display = "none";
+    after_subscribe.style.display = "block";
+    no_input.style.display = "none"
+  }
+  
+});
+
 const setText = (id, value) => {
   const el = document.getElementById(id);
   if (el) el.textContent = value;
