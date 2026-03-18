@@ -165,12 +165,9 @@ function finaliserAchat() {
     
     const total = panier.reduce((sum, item) => sum + item.tarif, 0);
     const confirmation = confirm(
-        `✅ CONFIRMER VOTRE ACHAT\n\n` +
-        `📦 ${panier.length} cours\n` +
-        `💰 TOTAL: ${total.toLocaleString()} Ar\n\n` +
-        `💳 PAIEMENT Mobile Money\n` +
-        `📱 MVola / Orange Money / Airtel Money\n\n` +
-        `📞 Appelez: 034 58 777 77 (Tokimahery)\n\n` +
+        ` CONFIRMER VOTRE ACHAT\n\n` +
+        ` ${panier.length} cours\n` +
+        ` TOTAL: ${total.toLocaleString()} Ar\n\n` +
         `Confirmez-vous ?`
     );
     
@@ -183,13 +180,10 @@ function finaliserAchat() {
             `📞 *Tel:* [Votre numéro]\n\n` +
             `Merci pour votre confiance ! 🙏`;
         
-        const whatsappUrl = `https://wa.me/261345877777?text=${encodeURIComponent(message)}`;
-        window.open(whatsappUrl, '_blank');
-        
         panier = [];
         localStorage.removeItem('panier');
         miseAJourBadgePanier();
-        alert('✅ *Commande transmise !*\n\n📞 Appelez 034 58 777 77 pour payer.');
+        alert('✅ *Commande transmise !*\n\n.');
         fermerPanier();
     }
 }
