@@ -12,8 +12,7 @@
 </head>
 
 <body>
-
-  <nav class="bg-[#991b1b] flex flex-col lg:flex-row justify-between lg:h-[10vh] items-center fixed w-full z-50 py-4 lg:py-0">
+<nav class="bg-[#991b1b] flex flex-col lg:flex-row justify-between lg:h-[10vh] items-center fixed w-full z-50 py-4 lg:py-0">
     <div class="flex lg:ml-10 mb-4 lg:mb-0">
       <a href="index.html" class="flex gap-2">
         <span class="w-1 bg-white h-10 inline-block"></span>
@@ -40,17 +39,17 @@
       </ul>
     </div>
     <div class="lg:mr-10 flex items-center gap-4">
-      <input class="text-white text-xm font-['Poppins'] placeholder-[#a8a29e] placeholder:font-thin bg-transparent border-b border-white/20 lg:border-none" type="text" placeholder="Search anything...">
+      <input class="text-white text-xm font-['Poppins'] placeholder-[#a8a29e] placeholder:font-thin bg-transparent border-b border-white/20 lg:border-none w-32 lg:w-auto" type="text" placeholder="Search anything...">
       <a onclick="ouvrirPanier()" class="relative"><i class="fa-solid fa-basket-shopping text-white fa-2x"></i><span
           id="cart-count"
           class="absolute -top-2 -right-2 bg-white text-[#991b1b] text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center shadow-sm">
           0
         </span></a>
     </div>
-  </nav>
+</nav>
 
-  <header class="flex flex-col lg:flex-row max items-center justify-center gap-20 min-h-screen px-12 bg-[#f9f6f1] w-full pt-[30vh] lg:pt-0">
-    <div class="max-w-xl h-full lg:ml-[8vw] text-center lg:text-left ">
+  <header class="flex flex-col lg:flex-row items-center justify-center gap-20 min-h-screen px-12 bg-[#f9f6f1] w-full pt-[30vh] lg:pt-0">
+    <div class="max-w-xl h-full lg:ml-[8vw] text-center lg:text-left order-2 lg:order-1">
       <div>
         <p class="text-[#991b1b] text-sm tracking-widest mb-6 flex items-center justify-center lg:justify-start gap-3 font-['Poppins']">
           <span class="w-10 h-0.5 bg-[#991b1b]"></span>
@@ -85,11 +84,12 @@
         <a href=""><i class="fa-brands fa-linkedin fa-lg text-gray-500 transition hover:-translate-y-1 hover:text-[#991b1b]" id="aboutMe"></i></a>
       </div>
     </div>
-    <div class="relative mt-12 lg:mt-0 lg:mr-[10vw] max-lg:mb-20">
+
+    <div class="relative mt-12 lg:mt-0 lg:mr-[10vw] max-lg:mb-20 order-1 lg:order-2">
       <div class="absolute inset-0 rounded-full border border-[#991b1b] scale-105"></div>
       <img src="square-image.jpg" class="w-[40vw] lg:w-[17vw] shadow-[10px_10px_0_#f9f6f1] object-cover rounded-full">
     </div>
-  </header>
+</header>
 
   <section class="max-w-7xl mx-auto px-12 py-32 grid grid-cols-1 lg:grid-cols-2 gap-24 items-start text-center lg:text-left">
     <div>
