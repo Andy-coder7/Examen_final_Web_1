@@ -12,8 +12,8 @@
 </head>
 
 <body>
-  <nav class="bg-[#991b1b] flex justify-between h-[10vh] items-center fixed w-full z-50">
-    <div class="flex ml-10">
+<nav class="bg-[#991b1b] flex flex-col lg:flex-row justify-between lg:h-[10vh] items-center fixed w-full z-50 py-4 lg:py-0">
+    <div class="flex lg:ml-10 mb-4 lg:mb-0">
       <a href="index.html" class="flex gap-2">
         <span class="w-1 bg-white h-10 inline-block"></span>
         <div>
@@ -29,40 +29,24 @@
         </div>
       </a>
     </div>
-    <div>
-      <ul class="flex gap-8">
-        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']"
-            href="index.html">HOME</a><span
-            class="absolute -bottom-2 left-1/2 h-1 w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-[1px]"></span>
-        </li>
-        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']"
-            href="blog.html">BLOG</a><span
-            class="absolute -bottom-2 left-1/2 h-1 w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-[1px]"></span>
-        </li>
-        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']"
-            href="courses.html">COURSES</a><span
-            class="absolute -bottom-2 left-1/2 h-1 w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-[1px]"></span>
-        </li>
-        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']"
-            href="testimonials.html">TESTIMONIALS</a><span
-            class="absolute -bottom-2 left-1/2 h-1 w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-[1px]"></span>
-        </li>
-        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']"
-            href="research.html">RESEARCH</a><span
-            class="absolute -bottom-2 left-1/2 h-1 w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-[1px]"></span>
-        </li>
+    <div class="mb-4 lg:mb-0">
+      <ul class="flex flex-wrap justify-center gap-6 lg:gap-8">
+        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="index.html">HOME</a><span class="absolute -bottom-2 left-1/2  w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-px"></span></li>
+        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="blog.html">BLOG</a><span class="absolute -bottom-2 left-1/2  w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-px"></span></li>
+        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="courses.html">COURSES</a><span class="absolute -bottom-2 left-1/2  w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-px"></span></li>
+        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="testimonials.html">TESTIMONIALS</a><span class="absolute -bottom-2 left-1/2  w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-px"></span></li>
+        <li class="group relative inline-block cursor-pointer"><a class="text-white font-['Poppins']" href="research.html">RESEARCH</a><span class="absolute -bottom-2 left-1/2  w-full -translate-x-1/2 scale-x-0 bg-white transition-transform duration-300 ease-in-out group-hover:scale-x-100 h-px"></span></li>
       </ul>
     </div>
-    <div class="mr-10">
-      <input class="text-white text-xm font-['Poppins'] placeholder-[#a8a29e] placeholder:font-thin" type="text"
-        placeholder="Search anything...">
+    <div class="lg:mr-10 flex items-center gap-4">
+      <input class="text-white text-xm font-['Poppins'] placeholder-[#a8a29e] placeholder:font-thin bg-transparent border-b border-white/20 lg:border-none w-32 lg:w-auto" type="text" placeholder="Search anything...">
       <a onclick="ouvrirPanier()" class="relative"><i class="fa-solid fa-basket-shopping text-white fa-2x"></i><span
           id="cart-count"
           class="absolute -top-2 -right-2 bg-white text-[#991b1b] text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center shadow-sm">
           0
         </span></a>
     </div>
-  </nav>
+</nav>
   <header class="bg-amber-50 w-full h-72  top-0 left-0 z-100 flex flex-col justify-center items-center px-12">
     <div class="flex items-center pt-20 gap-2">
       <span class="w-8 h-px bg-[#991b1b]"></span>
