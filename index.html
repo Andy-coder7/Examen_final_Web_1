@@ -121,51 +121,80 @@
     </div>
   </section>
 
-  <section class="bg-[#f9f6f1] items-center justify-center flex flex-col py-20 lg:h-[70vh] gap-10">
+<section class="bg-[#f9f6f1] items-center justify-center flex flex-col py-12 px-6 lg:min-h-screen gap-10">
     <div>
-      <p class="text-[#78716c] tracking-wide font-['Poppins'] text-xs flex gap-4 justify-center items-center"><span class="h-0.5 w-10 bg-[#991b1b] inline-block"></span>LEARNING
-      <span class="h-0.5 w-10 bg-[#991b1b] inline-block"></span></p>
+      <p class="text-[#78716c] tracking-wide font-['Poppins'] text-xs flex gap-4 justify-center items-center">
+        <span class="h-0.5 w-10 bg-[#991b1b] inline-block"></span>LEARNING
+        <span class="h-0.5 w-10 bg-[#991b1b] inline-block"></span>
+      </p>
     </div>
     <div class="items-center flex flex-col text-center">
-      <p class="font-extrabold font-['DM_Sans'] text-5xl">Courses online</p>
-      <p class="font-extrabold font-['DM_Sans'] text-5xl">and offline</p>
+      <p class="font-extrabold font-['DM_Sans'] text-4xl md:text-5xl">Courses online</p>
+      <p class="font-extrabold font-['DM_Sans'] text-4xl md:text-5xl">and offline</p>
     </div>
-    <div class="flex flex-col lg:flex-row gap-5 w-full justify-center items-center">
-      <div class="w-[80vw] lg:w-[21vw] bg-white rounded-2xl p-8 min-[1025px]:max-[1350px]:h-[30vh] lg:h-[22vh] shadow-lg flex flex-col justify-center duration-300 hover:-translate-y-3">
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
+      
+      <div class="bg-white rounded-2xl p-8 shadow-lg flex flex-col justify-between duration-300 hover:-translate-y-3 min-h-[250px]">
         <div class="flex flex-col gap-4">
-          <div class="bg-[#b91c1c] rounded-2xl flex text-center w-32 items-center justify-center h-8 mx-auto lg:mx-0"><p id="development" class="text-white"></p></div>
-          <div class="text-center lg:text-left"><p id="fundamentals" class="font-bold font-['Playfair_Display'] text-2xl"></p></div>
+          <div class="bg-[#b91c1c] rounded-2xl flex text-center w-32 items-center justify-center h-8 mx-auto lg:mx-0">
+            <p id="development" class="text-white">Development</p>
+          </div>
+          <div class="text-center lg:text-left">
+            <p id="fundamentals" class="font-bold font-['Playfair_Display'] text-2xl text-gray-900">Web Development Fundamentals</p>
+          </div>
         </div>
         <div class="flex flex-col gap-4 mt-6">
-          <hr class="bg-[#78716c]">
-          <div class="flex justify-between"><p id="online" class="text-[#78716c]"></p><p class="text-[#78716c]" id="8_weeks"></p></div>
+          <hr class="border-[#78716c]/20">
+          <div class="flex justify-between text-sm">
+            <p id="online" class="text-[#78716c]">Online</p>
+            <p class="text-[#78716c]" id="8_weeks">8 weeks</p>
+          </div>
         </div>
       </div>
-      <div class="w-[80vw] lg:w-[21vw] bg-white rounded-2xl p-8 min-[1025px]:max-[1350px]:h-[30vh] lg:h-[22vh] shadow-lg flex flex-col justify-center duration-300 hover:-translate-y-3">
+
+      <div class="bg-white rounded-2xl p-8 shadow-lg flex flex-col justify-between duration-300 hover:-translate-y-3 min-h-[250px]">
         <div class="flex flex-col gap-4">
-          <div class="bg-black rounded-2xl flex text-center w-32 items-center justify-center h-8 mx-auto lg:mx-0"><p id="translation" class="text-white leading-loose"></p></div>
-          <div class="text-center lg:text-left"><p id="technical" class="font-bold font-['Playfair_Display'] leading-none text-2xl"></p></div>
+          <div class="bg-black rounded-2xl flex text-center w-32 items-center justify-center h-8 mx-auto lg:mx-0">
+            <p id="translation" class="text-white leading-loose">Translation</p>
+          </div>
+          <div class="text-center lg:text-left">
+            <p id="technical" class="font-bold font-['Playfair_Display'] leading-none text-2xl text-gray-900">Technical Translation Masterclass</p>
+          </div>
         </div>
         <div class="flex flex-col gap-4 mt-6">
-          <hr class="bg-[#78716c]">
-          <div class="flex justify-between"><p id="hybrid" class="text-[#78716c]"></p><p class="text-[#78716c]" id="6_weeks"></p></div>
+          <hr class="border-[#78716c]/20">
+          <div class="flex justify-between text-sm">
+            <p id="hybrid" class="text-[#78716c]">Hybrid</p>
+            <p class="text-[#78716c]" id="6_weeks">6 weeks</p>
+          </div>
         </div>
       </div>
-      <div class="w-[80vw] lg:w-[21vw] bg-white rounded-2xl p-8 min-[1025px]:max-[1350px]:h-[30vh] lg:h-[22vh] shadow-lg flex flex-col justify-center duration-300 hover:-translate-y-3">
+
+      <div class="bg-white rounded-2xl p-8 shadow-lg flex flex-col justify-between duration-300 hover:-translate-y-3 min-h-[250px] md:col-span-2 lg:col-span-1 md:max-w-md md:mx-auto lg:max-w-none">
         <div class="flex flex-col gap-4">
-          <div class="bg-[#78716c] rounded-2xl flex text-center w-32 items-center justify-center h-8 mx-auto lg:mx-0"><p id="research" class="text-white"></p></div>
-          <div class="text-center lg:text-left"><p id="academic" class="font-bold font-['Playfair_Display'] text-2xl"></p></div>
+          <div class="bg-[#78716c] rounded-2xl flex text-center w-32 items-center justify-center h-8 mx-auto lg:mx-0">
+            <p id="research" class="text-white">Research</p>
+          </div>
+          <div class="text-center lg:text-left">
+            <p id="academic" class="font-bold font-['Playfair_Display'] text-2xl text-gray-900">Academic Writing & Methodology</p>
+          </div>
         </div>
         <div class="flex flex-col gap-4 mt-6">
-          <hr class="bg-[#78716c]">
-          <div class="flex justify-between"><p id="offline" class="text-[#78716c]"></p><p class="text-[#78716c]" id="10_weeks"></p></div>
+          <hr class="border-[#78716c]/20">
+          <div class="flex justify-between text-sm">
+            <p id="offline" class="text-[#78716c]">Offline</p>
+            <p class="text-[#78716c]" id="10_weeks">10 weeks</p>
+          </div>
         </div>
       </div>
+
     </div>
+
     <div>
       <a class="text-[#991b1b] hover:text-[#b91c1c] underline text-sm tracking-wide font-['Poppins']" href="courses.html">VIEW ALL COURSES →</a>
     </div>
-  </section>
+</section>
 
   <section class="py-28 px-10">
     <div class="max-w-6xl mx-auto">
